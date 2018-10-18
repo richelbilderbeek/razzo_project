@@ -1,24 +1,11 @@
-sudo: true
-dist: trusty
+language: r
+cache: packages
 
 script:
-  # Install R, from http://www.jason-french.com/blog/2013/03/11/installing-r-in-linux/
-  # Grabs your version of Ubuntu as a BASH variable
-  - CODENAME=`grep CODENAME /etc/lsb-release | cut -c 18-`
-  # Appends the CRAN repository to your sources.list file 
-  - sudo sh -c 'echo "deb http://cran.rstudio.com/bin/linux/ubuntu $CODENAME" >> /etc/apt/sources.list'
-  # Adds the CRAN GPG key, which is used to sign the R packages for security.
-  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
-  - sudo apt-get update
-  - sudo apt-get install r-base r-dev
-  # Start razzo
   - sudo scripts/install_razzo.sh
   - mkdir data
   - cd data
   - ./../scripts/create_parameter_files.sh
-
-after_failure:
-  - cd data; find .
 
 after_success:
   - cd data; find .
