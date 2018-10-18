@@ -2,6 +2,7 @@ language: r
 cache: packages
 
 script:
+  - whereis Rscript
   - sudo scripts/install_razzo.sh
   - mkdir data
   - cd data
