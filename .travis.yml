@@ -14,7 +14,7 @@ script:
   - which Rscript
   - whereis Rscript
   - echo $PATH
-  - sudo scripts/install_razzo.sh
+  - sudo ./scripts/install_razzo.sh
   - mkdir data
   - cd data
   - export PATH="$PATH:/home/travis/R-bin/bin"; ./../scripts/create_parameter_files.sh
