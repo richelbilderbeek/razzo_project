@@ -11,5 +11,4 @@
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 module load R
-cd data
 Rscript -e 'razzo::raz_create_parameters_files()'
