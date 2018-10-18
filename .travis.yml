@@ -1,5 +1,7 @@
+sudo: true
 
 script:
+  - sudo apt install r-base
   - sudo scripts/install_razzo.sh
   - mkdir data
   - cd data
