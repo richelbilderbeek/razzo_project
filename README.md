@@ -12,7 +12,15 @@ Should create the following folder structure:
  * `data`: contains the simulation data
  * `results`: contains the simulation results
 
-## Usage
+## Cluster usage
+
+ * `sbatch ./scripts/install_razzo.sh`
+ * `mkdir data`
+ * `cd data`
+ * `sbatch ../scripts/create_parameter_files.sh`
+
+
+## Local usage
 
  * `sudo ./scripts/install_razzo.sh`
  * `mkdir data`
