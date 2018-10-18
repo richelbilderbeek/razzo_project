@@ -5,6 +5,9 @@ script:
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
   - sudo apt install r-bas*
+  - which R
+  - whereis R
+  - which Rscript
   - whereis Rscript
   - export PATH="$PATH:/home/travis/R-3.1.2/bin/"
   - sudo scripts/install_razzo.sh
