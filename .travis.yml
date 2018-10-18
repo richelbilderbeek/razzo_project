@@ -2,7 +2,7 @@ language: r
 cache: packages
 
 before_script:
-  - sudo apt install r-base r-base-core r-base-dev
+  #- sudo apt install r-base r-base-core r-base-dev
   - export PATH="$PATH:/home/travis/R-bin/bin"
   - echo $PATH
 
