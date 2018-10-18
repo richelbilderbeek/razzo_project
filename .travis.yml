@@ -1,7 +1,8 @@
 sudo: true
+dist: trusty
 
 script:
-  - sudo apt install r-base
+  - sudo apt-get install r-base
   - sudo scripts/install_razzo.sh
   - mkdir data
   - cd data
