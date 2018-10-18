@@ -9,11 +9,11 @@ script:
   - whereis R
   - which Rscript
   - whereis Rscript
-  - export PATH="$PATH:/home/travis/R-bin/bin/Rscript"
-  - export PATH="$PATH:/home/travis/R-bin/bin/Rscript"; sudo scripts/install_razzo.sh
+  - export PATH="$PATH:/home/travis/R-bin/bin"
+  - sudo scripts/install_razzo.sh
   - mkdir data
   - cd data
-  - export PATH="$PATH:/home/travis/R-bin/bin/Rscript"; ./../scripts/create_parameter_files.sh
+  - ./../scripts/create_parameter_files.sh
 
 after_success:
   - cd data; find .
