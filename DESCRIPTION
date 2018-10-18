@@ -1,0 +1,17 @@
+Package: razzo_project
+Type: Package
+Title: The Razzo Project
+Version: 0.1.0
+Authors@R: c(
+  person("Giavonni", "Laudanno", role = c("aut")),
+  person("Richel", "Bilderbeek", email = "richel@richelbilderbeek.nl", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-1107-7049")))
+Author: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
+Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
+Description: The scripts for the razzo project.
+  The main repo for the code is razzo.
+  The main repo for the scripts is razzo_project.
+License: GPL-3 | file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+Suggests:
