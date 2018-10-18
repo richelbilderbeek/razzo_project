@@ -1,5 +1,4 @@
 #!/bin/bash
-
 echo "home_dir = substring(getwd(),1,13)" > Rsetup.R
 echo "libs_dir = paste0(home_dir,'/mbd_like/libs')" >> Rsetup.R
 echo "lib_files = list.files(pattern=paste0('[.]tar'),path=libs_dir, full.names=TRUE)" >> Rsetup.R
@@ -28,5 +27,3 @@ echo "rm Rsetup2" >> Rsetup2
 #sbatch Rsetup2
 chmod +x Rsetup2
 ./Rsetup2
-
-
