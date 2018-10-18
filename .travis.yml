@@ -1,6 +1,9 @@
 
 script:
-  - sudo scripts/install_packages.sh
+  - sudo scripts/install_razzo.sh
+  - mkdir data
+  - cd data
+  - ./../scripts/create_parameter_files.sh
 
 after_failure:
   - cd data; find .
