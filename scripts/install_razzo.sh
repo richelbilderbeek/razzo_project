@@ -12,6 +12,13 @@ module load GCCcore/4.9.3
 module load XZ/5.2.2-foss-2016a
 #module load R/3.3.1-foss-2016a
 module load R
+
+# From https://askubuntu.com/a/30157
+if ! [ $(id -u) = 0 ]; then
+ echo "User must be root, please use 'sudo sbatch install_razzo.sh'"
+ exit 1
+fi
+
 Rscript -e 'devtools::install_github("richelbilderbeek/beautier")'
 Rscript -e 'devtools::install_github("richelbilderbeek/tracerer")'
 Rscript -e 'devtools::install_github("richelbilderbeek/beastier")'
