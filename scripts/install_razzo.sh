@@ -19,13 +19,14 @@ module load R
 # exit 1
 #fi
 
+
 Rscript -e 'devtools::install_github("richelbilderbeek/beautier")'
 Rscript -e 'devtools::install_github("richelbilderbeek/tracerer")'
 Rscript -e 'devtools::install_github("richelbilderbeek/beastier")'
 Rscript -e 'devtools::install_github("richelbilderbeek/mauricer")'
 Rscript -e 'devtools::install_github("richelbilderbeek/babette")'
 Rscript -e 'devtools::install_github("richelbilderbeek/pirouette")'
+Rscript -e 'devtools::install_github("Giappo/mbd")'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys")'
 Rscript -e 'devtools::install_github("richelbilderbeek/razzo")'
-Rscript -e 'devtools::install_github("Giappo/mbd")'
 Rscript -e 'beastier::install_beast2()'
