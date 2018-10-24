@@ -35,4 +35,4 @@ after_success:
 
 after_failure:
   - pwd
-  - find .
+  - cd data; find .
