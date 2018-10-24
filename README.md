@@ -20,16 +20,11 @@ Should create the following folder structure:
 ## Cluster usage
 
  * `sbatch ./scripts/install_razzo.sh`
- * `mkdir data`
- * `cd data`
- * `sbatch ../scripts/create_parameter_files.sh`
-
+ * `sbatch ./scripts/create_parameter_files.sh`
 
 ## Local usage
 
- * `sudo ./scripts/install_razzo.sh`
- * `mkdir data`
- * `cd data`
- * `./../scripts/create_parameter_files.sh`
+ * `./scripts/install_razzo.sh`
+ * `./scripts/create_parameter_files.sh`
 
 See [.travis.yml](.travis.yml) for the complete usage.
