@@ -25,7 +25,7 @@ r_github_packages:
 
 script:
   # Create the parameter files
-  - ./../scripts/create_parameter_files.sh
+  - ./scripts/create_parameter_files.sh
   - sudo apt-get install -qq oracle-java8-installer # Java 8
   - sudo apt-get install oracle-java8-set-default
 
