@@ -14,7 +14,7 @@ module load R
 for filename in $(find . | egrep "parameters\.csv")
 do
   echo $filename
-  Rscript -e 'razzo::raz_create_mbd_tree_file("$filename")'
+  Rscript -e 'razzo::raz_create_mbd_tree_file("'$filename'")'
   #Rscript -e 'razzo::raz_create_bd_tree_file()'
   #Rscript -e 'razzo::raz_create_mbd_alignment_file()'
   #Rscript -e 'razzo::raz_create_bd_alignment_file()'
