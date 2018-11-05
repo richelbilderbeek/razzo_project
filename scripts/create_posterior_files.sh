@@ -14,6 +14,8 @@ module load R
 for filename in $(find . | egrep "parameters\.csv")
 do
   echo $filename
+  echo "MBD"
   Rscript -e 'razzo::raz_create_mbd_posterior_files("'$filename'")'
+  echo "BD"
   Rscript -e 'razzo::raz_create_bd_posterior_files("'$filename'")'
 done
