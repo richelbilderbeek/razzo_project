@@ -24,12 +24,13 @@ r_github_packages:
 
 
 script:
-  # Create the parameter files
   - ./scripts/create_parameter_files.sh
   - ./scripts/create_input_files.sh
-  - ./scripts/create_posterior_files.sh
+  # Java
   - sudo apt-get install -qq oracle-java8-installer # Java 8
   - sudo apt-get install oracle-java8-set-default
+  - Rscript -e "beastier::install_beast2()"
+  - ./scripts/create_posterior_files.sh
 
 after_success:
   - pwd
