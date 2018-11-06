@@ -33,6 +33,7 @@ script:
   - sudo apt-get install oracle-java8-set-default
   - Rscript -e "beastier::install_beast2()"
   - ./scripts/create_posterior_files.sh
+  - ./scripts/create_nltt_files.sh
 
 after_success:
   - pwd
