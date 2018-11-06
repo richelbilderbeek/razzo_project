@@ -8,7 +8,6 @@ r_packages:
   - xml2
 
 r_github_packages:
-  - Giappo/mbd
   - jimhester/covr
   - jimhester/lintr
   - richelbilderbeek/babette
@@ -21,9 +20,12 @@ r_github_packages:
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
   - ropensci/spelling
+  # - Giappo/mbd # Don't use before overhaul is finished
 
 
 script:
+  # Use mbd package before overhaul
+  - Rscript -e 'devtools::install_github("Giappo/mbd", ref = "d1b85b44cbcc28c20376708d8b6dee87298fa43d")'
   - ./scripts/create_parameter_files.sh
   - ./scripts/create_input_files.sh
   # Java

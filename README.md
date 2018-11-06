@@ -26,5 +26,7 @@ Should create the following folder structure:
 
  * `./scripts/install_razzo.sh`
  * `./scripts/create_parameter_files.sh`
+ * `./scripts/create_input_files.sh`
+ * `./scripts/create_posterior_files.sh`
 
 See [.travis.yml](.travis.yml) for the complete usage.
