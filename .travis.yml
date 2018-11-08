@@ -30,6 +30,7 @@ script:
   - sudo apt-get install -qq oracle-java8-installer # Java 8
   - sudo apt-get install oracle-java8-set-default
   - Rscript -e "beastier::install_beast2()"
+  - Rscript -e 'mauricer::mrc_install("NS")'
   - ./scripts/create_posterior_files.sh
   - ./scripts/create_nltt_files.sh
 
