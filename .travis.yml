@@ -22,7 +22,6 @@ r_github_packages:
   - ropensci/spelling
   - Giappo/mbd
 
-
 script:
   - ./scripts/create_parameter_files.sh
   - ./scripts/create_input_files.sh
