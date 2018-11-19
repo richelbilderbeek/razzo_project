@@ -24,9 +24,15 @@ Should create the following folder structure:
 
 ## Local usage
 
- * `./scripts/install_razzo.sh`
- * `./scripts/create_parameter_files.sh`
- * `./scripts/create_input_files.sh`
- * `./scripts/create_posterior_files.sh`
+ * `./scripts/1_install_razzo.sh`
+ * `./scripts/2_create_parameter_files.sh`
+ * `./scripts/3_create_input_files.sh`
+ * `./scripts/4_create_posterior_files.sh`
+ * `./scripts/5_create_nltt_files.sh`
+ * `./scripts/6_create_marg_lik_files.sh`
+ * `./scripts/7_create_nltt_stats_file.sh`
+ * `./scripts/8_create_esses_file.sh`
+ * `./scripts/9_create_marg_liks_file.sh`
+ * `./scripts/10_create_result_fig_1_file.sh`
 
 See [.travis.yml](.travis.yml) for the complete usage.
