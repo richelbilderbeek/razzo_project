@@ -23,14 +23,14 @@ r_github_packages:
   - Giappo/mbd
 
 script:
-  - ./scripts/1_install_razzo.sh
-  - ./scripts/2_create_parameter_files.sh
-  - ./scripts/3_create_input_files.sh
   # Java
   - sudo apt-get install -qq oracle-java8-installer # Java 8
   - sudo apt-get install oracle-java8-set-default
-  - Rscript -e "beastier::install_beast2()"
-  - Rscript -e 'mauricer::mrc_install("NS")'
+  - ./scripts/1_install_razzo.sh
+  - # Rscript -e "beastier::install_beast2()"
+  - # Rscript -e 'mauricer::mrc_install("NS")'
+  - ./scripts/2_create_parameter_files.sh
+  - ./scripts/3_create_input_files.sh
   - ./scripts/4_create_posterior_files.sh
   - ./scripts/5_create_nltt_files.sh
   - # ./scripts/6_create_marg_lik_files.sh
