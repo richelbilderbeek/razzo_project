@@ -37,10 +37,10 @@ script:
 
 after_success:
   - pwd
-  - cd data; find .
-  - cd results; find .
+  - cd data; find .; cd ..
+  - cd results; find .; cd ..
 
 after_failure:
   - pwd
-  - cd data; find .
-  - cd results; find .
+  - cd data; find .; cd ..
+  - cd results; find .; cd ..
