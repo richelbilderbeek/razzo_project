@@ -15,7 +15,7 @@ r_github_packages:
   - richelbilderbeek/beautier
   - richelbilderbeek/mauricer
   - richelbilderbeek/pirouette
-  - richelbilderbeek/razzo
+  - richelbilderbeek/razzo@richel
   - richelbilderbeek/tracerer
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
