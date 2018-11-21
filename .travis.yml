@@ -35,6 +35,7 @@ script:
   - ./scripts/5_create_nltt_files.sh
   - # ./scripts/6_create_marg_lik_files.sh
   - ./scripts/8_create_esses_files.sh
+  - ./scripts/10_create_fig_1_file.sh
 
 after_success:
   - pwd
