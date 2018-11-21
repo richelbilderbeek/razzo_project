@@ -27,14 +27,16 @@ script:
   - sudo apt-get install -qq oracle-java8-installer # Java 8
   - sudo apt-get install oracle-java8-set-default
   - ./scripts/1_install_razzo.sh
-  - # Rscript -e "beastier::install_beast2()"
-  - # Rscript -e 'mauricer::mrc_install("NS")'
   - ./scripts/2_create_parameter_files.sh
   - ./scripts/3_create_input_files.sh
+  - Rscript -e "beastier::install_beast2()"
   - ./scripts/4_create_posterior_files.sh
   - ./scripts/5_create_nltt_files.sh
-  - # ./scripts/6_create_marg_lik_files.sh
+  - Rscript -e 'mauricer::mrc_install("NS")'
+  - ./scripts/6_create_marg_lik_files.sh
+  - # ./scripts/7_create_nltt_stats_file.sh
   - ./scripts/8_create_esses_files.sh
+  - # ./scripts/9_create_marg_liks_file.sh
   - ./scripts/10_create_fig_1_file.sh
 
 after_success:
