@@ -29,10 +29,10 @@ script:
   - ./scripts/1_install_razzo.sh
   - ./scripts/2_create_parameter_files.sh
   - ./scripts/3_create_input_files.sh
-  - Rscript -e "beastier::install_beast2()"
+  - # No need to install BEAST2: this is done by 1
   - ./scripts/4_create_posterior_files.sh
   - ./scripts/5_create_nltt_files.sh
-  - Rscript -e 'mauricer::mrc_install("NS")'
+  - # No need to install NS: this is done by 1
   - ./scripts/6_create_marg_lik_files.sh
   - # ./scripts/7_create_nltt_stats_file.sh
   - ./scripts/8_create_esses_files.sh
