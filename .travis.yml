@@ -34,9 +34,9 @@ script:
   - ./scripts/5_create_nltt_files.sh
   - # No need to install NS: this is done by 1
   - ./scripts/6_create_marg_lik_files.sh
-  - # ./scripts/7_create_nltt_stats_file.sh
+  - ./scripts/7_create_nltt_stats_file.sh
   - ./scripts/8_create_esses_files.sh
-  - # ./scripts/9_create_marg_liks_file.sh
+  - ./scripts/9_create_marg_liks_file.sh
   - ./scripts/10_create_fig_1_file.sh
 
 after_success:

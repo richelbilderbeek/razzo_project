@@ -6,8 +6,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
-#SBATCH --job-name=raz_create_posterior_files
-#SBATCH --output=raz_create_create_posterior_files.log
+#SBATCH --job-name=create_posterior_files
+#SBATCH --output=create_create_posterior_files.log
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 module load R
@@ -15,7 +15,7 @@ for filename in $(find . | egrep "parameters\.csv")
 do
   echo $filename
   echo "MBD"
-  Rscript -e 'razzo::raz_create_mbd_posterior_files("'$filename'")'
+  Rscript -e 'razzo::create_mbd_posterior_files("'$filename'")'
   echo "BD"
-  Rscript -e 'razzo::raz_create_bd_posterior_files("'$filename'")'
+  Rscript -e 'razzo::create_bd_posterior_files("'$filename'")'
 done

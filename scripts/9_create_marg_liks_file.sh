@@ -11,4 +11,4 @@
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 module load R
-Rscript -e 'razzo::create_esses_file()'
+Rscript -e 'razzo::create_marg_liks_file()'

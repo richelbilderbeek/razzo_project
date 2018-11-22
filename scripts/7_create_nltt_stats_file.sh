@@ -1,14 +1,14 @@
 #!/bin/bash
-# Create file with all collected ESSes
+# Create input files
 # Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
-#SBATCH --job-name=create_esses_file
-#SBATCH --output=create_esses_file.log
+#SBATCH --job-name=create_nltt_stats_file
+#SBATCH --output=create_nltt_stats_file.log
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 module load R
-Rscript -e 'razzo::create_esses_file()'
+Rscript -e 'razzo::create_nltt_stats_file()'
