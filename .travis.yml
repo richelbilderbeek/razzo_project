@@ -21,6 +21,7 @@ r_github_packages:
   - KlausVigo/phangorn
   - ropensci/spelling
   - Giappo/mbd
+  - xl0418/dododo 
 
 script:
   # Java
