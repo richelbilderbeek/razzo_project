@@ -47,8 +47,10 @@ after_success:
   - pwd
   - cd data; find .; cd ..
   - cd results; find .; cd ..
+  - cat $(find . | egrep "results.*\.csv$")
 
 after_failure:
   - pwd
   - cd data; find .; cd ..
   - cd results; find .; cd ..
+  - cat $(find . | egrep "results.*\.csv$")
