@@ -28,8 +28,8 @@ before_script:
 
 script:
   # Java
-  - sudo apt-get install -qq oracle-java8-installer # Java 8
-  - sudo apt-get install oracle-java8-set-default
+  #- sudo apt-get install -qq oracle-java8-installer # Java 8
+  #- sudo apt-get install oracle-java8-set-default
   - ./scripts/1_install_razzo.sh
   - ./scripts/2_create_parameter_files.sh
   - ./scripts/3_create_input_files.sh
