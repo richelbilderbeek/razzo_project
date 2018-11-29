@@ -21,10 +21,12 @@ r_github_packages:
   - KlausVigo/phangorn
   - ropensci/spelling
   - Giappo/mbd
-  - xl0418/dododo 
+  - xl0418/dododo
+
+before_script:
+  - Rscript -e 'devtools::install_github("xl0418/dododo")'
 
 script:
-  - Rscript -e 'devtools::install_github("xl0418/dododo")'
   # Java
   - sudo apt-get install -qq oracle-java8-installer # Java 8
   - sudo apt-get install oracle-java8-set-default
