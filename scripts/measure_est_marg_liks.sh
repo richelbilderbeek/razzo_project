@@ -18,6 +18,8 @@ Rscript -e 'devtools::install_github("richelbilderbeek/beastier")'
 Rscript -e 'devtools::install_github("richelbilderbeek/mauricer")'
 Rscript -e 'devtools::install_github("richelbilderbeek/babette")'
 Rscript -e 'devtools::install_github("richelbilderbeek/mcbette")'
+Rscript -e 'beastier::install_beast2()'
+Rscript -e 'mauricer::mrc_install("NS")'
 
 for filename in $(find . | egrep "\.fas")
 do
