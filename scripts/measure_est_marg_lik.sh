@@ -1,7 +1,6 @@
 #!/bin/bash
 # Estimate a marginal likelihood
-# Short to check the scripts
-#SBATCH --time=0:01:00
+#SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
