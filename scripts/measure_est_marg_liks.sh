@@ -15,5 +15,5 @@ module load R
 for filename in $(find . | egrep "\.fas")
 do
   echo $filename
-  sbatch est_marg_lik.sh $filename
+  sbatch ./measure_est_marg_lik.sh $filename
 done
