@@ -1,7 +1,7 @@
 #!/bin/bash
 # Measure how long it takes to estimate marginal likelihoods
 # by doing so on each FASTA file in the folder
-#SBATCH --time=1:00:00
+#SBATCH --time=0:01:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
