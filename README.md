@@ -35,5 +35,13 @@ Should create the following folder structure:
  * `./scripts/9_create_marg_liks_file.sh`
  * `./scripts/10_create_fig_1_file.sh`
 
-
 See [.travis.yml](.travis.yml) for the complete usage.
+
+## `mcbette` timeseries
+
+n_taxa|n_nucleotides|run_time
+---|---|---
+10|1k|0:40 or 40 mins
+20|1k|1:23 or 83
+40|1k|3:35 or 215 mins
+80|1k|more than 10 hours, got cancelled
