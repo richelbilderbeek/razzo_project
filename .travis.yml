@@ -17,7 +17,7 @@ r_github_packages:
   - richelbilderbeek/mauricer
   - richelbilderbeek/pirouette
   - richelbilderbeek/razzo@richel
-  - richelbilderbeek/tracerer
+  - ropensci/tracerer
   - MangoTheCat/goodpractice
   - KlausVigo/phangorn
   - ropensci/spelling

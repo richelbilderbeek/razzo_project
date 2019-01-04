@@ -13,7 +13,7 @@ module load XZ/5.2.2-foss-2016a
 module load R
 
 Rscript -e 'devtools::install_github("ropensci/beautier")'
-Rscript -e 'devtools::install_github("richelbilderbeek/tracerer")'
+Rscript -e 'devtools::install_github("ropensci/tracerer")'
 Rscript -e 'devtools::install_github("richelbilderbeek/beastier")'
 Rscript -e 'devtools::install_github("richelbilderbeek/mauricer")'
 Rscript -e 'devtools::install_github("richelbilderbeek/babette")'
