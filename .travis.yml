@@ -8,7 +8,6 @@ r_packages:
   - xml2
 
 r_github_packages:
-  - xl0418/dododo
   - jimhester/covr
   - jimhester/lintr
   - ropensci/babette
