@@ -10,17 +10,17 @@ r_packages:
 r_github_packages:
   - jimhester/covr
   - jimhester/lintr
-  - ropensci/babette
-  - ropensci/beastier
+  - KlausVigo/phangorn
+  - Giappo/mbd
   - ropensci/beautier
+  - ropensci/tracerer
+  - ropensci/beastier
   - ropensci/mauricer
+  - ropensci/babette
   - richelbilderbeek/pirouette
   - richelbilderbeek/razzo@richel
-  - ropensci/tracerer
   - MangoTheCat/goodpractice
-  - KlausVigo/phangorn
   - ropensci/spelling
-  - Giappo/mbd
 
 before_install:
   - sudo add-apt-repository -y ppa:opencpu/imagemagick
