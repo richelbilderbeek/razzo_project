@@ -20,6 +20,7 @@ r_github_packages:
   - ropensci/beastier
   - ropensci/mauricer
   - ropensci/babette
+  - richelbilderbeek/nLTT
   - richelbilderbeek/mcbette
   - richelbilderbeek/pirouette
   - richelbilderbeek/razzo@richel
