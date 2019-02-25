@@ -20,6 +20,6 @@ Rscript -e 'devtools::install_github("ropensci/babette")'
 Rscript -e 'devtools::install_github("richelbilderbeek/pirouette", ref = "richel")'
 Rscript -e 'devtools::install_github("Giappo/mbd")'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys")'
-Rscript -e 'devtools::install_github("richelbilderbeek/razzo")'
+Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "richel")'
 Rscript -e 'beastier::install_beast2()'
 Rscript -e 'mauricer::install_beast2_pkg("NS")' || true
