@@ -19,15 +19,22 @@ Should create the following folder structure:
 
 ## Cluster usage
 
- * `sbatch ./scripts/install_razzo.sh`
- * `sbatch ./scripts/create_parameter_files.sh`
+:warning: must run from the root folder
+
+Regenerate testing data:
+
+ * `sbatch ./scripts/regen_data.sh`
+
+Run the razzo experiment:
+
+ * `sbatch ./scripts/1_install_razzo.sh`
+ * `sbatch ./scripts/2_create_parameter_files.sh`
 
 ## Local usage
 
  * `./scripts/1_install_razzo.sh`
  * `./scripts/2_create_parameter_files.sh`
  * `./scripts/3_create_input_files.sh`
- * `./scripts/4_create_posterior_files.sh`
  * `./scripts/5_create_nltt_files.sh`
  * `./scripts/6_create_marg_lik_files.sh`
  * `./scripts/7_create_nltt_stats_file.sh`

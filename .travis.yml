@@ -7,9 +7,6 @@ r_packages:
   - hunspell
   - xml2
 
-bioc_packages:
-  - ggtree
-
 r_github_packages:
   - jimhester/covr
   - jimhester/lintr
@@ -23,7 +20,7 @@ r_github_packages:
   - richelbilderbeek/nLTT
   - richelbilderbeek/mcbette
   - richelbilderbeek/pirouette
-  - richelbilderbeek/razzo@richel
+  - richelbilderbeek/razzo
   - MangoTheCat/goodpractice
   - ropensci/spelling
 
@@ -40,8 +37,8 @@ script:
   - ./scripts/1_install_razzo.sh
   - ./scripts/2_create_parameter_files.sh
   - # No need to install BEAST2: this is done by 1
-  - #./scripts/3_run_razzo.sh
-  - #./scripts/5_create_nltt_files.sh
+  - ./scripts/3_run_razzo.sh
+  - ./scripts/5_create_nltt_files.sh
   - # No need to install NS: this is done by 1
   - #./scripts/6_create_marg_lik_files.sh
   - #./scripts/7_create_nltt_stats_file.sh
