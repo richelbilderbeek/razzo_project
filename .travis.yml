@@ -38,7 +38,7 @@ script:
   - ./scripts/2_create_parameter_files.sh
   - # No need to install BEAST2: this is done by 1
   - ./scripts/3_run_razzo.sh
-  - ./scripts/5_create_nltt_files.sh
+  - #./scripts/5_create_nltt_files.sh
   - # No need to install NS: this is done by 1
   - #./scripts/6_create_marg_lik_files.sh
   - #./scripts/7_create_nltt_stats_file.sh
@@ -50,10 +50,10 @@ after_success:
   - pwd
   - cd data; find .; cd ..
   - cd results; find .; cd ..
-  - cat $(find . | egrep "results.*\.csv$")
+  - # cat $(find . | egrep "results.*\.csv$")
 
 after_failure:
   - pwd
   - cd data; find .; cd ..
   - cd results; find .; cd ..
-  - cat $(find . | egrep "results.*\.csv$")
+  - # cat $(find . | egrep "results.*\.csv$")
