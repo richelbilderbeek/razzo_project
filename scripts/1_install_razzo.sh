@@ -6,8 +6,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
-#SBATCH --job-name=install_razzo
-#SBATCH --output=install_razzo.log
+#SBATCH --job-name=1_install_razzo
+#SBATCH --output=1_install_razzo.log
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 #module load R/3.3.1-foss-2016a
@@ -22,4 +22,4 @@ Rscript -e 'devtools::install_github("Giappo/mbd")'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys")'
 Rscript -e 'devtools::install_github("richelbilderbeek/razzo")'
 Rscript -e 'beastier::install_beast2()'
-Rscript -e 'mauricer::install_beast2_pkg("NS")'
+Rscript -e 'mauricer::install_beast2_pkg("NS")' || true
