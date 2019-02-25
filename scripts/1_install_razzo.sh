@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to install raket and its dependencies
+# Script to install razzo and its dependencies
 # on the Peregrine computer cluster
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
@@ -20,6 +20,6 @@ Rscript -e 'devtools::install_github("ropensci/babette")'
 Rscript -e 'devtools::install_github("richelbilderbeek/pirouette")'
 Rscript -e 'devtools::install_github("Giappo/mbd")'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys")'
-Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "richel")'
+Rscript -e 'devtools::install_github("richelbilderbeek/razzo")'
 Rscript -e 'beastier::install_beast2()'
 Rscript -e 'mauricer::install_beast2_pkg("NS")'
