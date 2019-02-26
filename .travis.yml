@@ -36,11 +36,8 @@ script:
   #- sudo apt-get install oracle-java8-set-default
   - ./scripts/1_install_razzo.sh
   - ./scripts/2_create_parameter_files.sh
-  - # No need to install BEAST2: this is done by 1
+  - # No need to install BEAST2, nor NS: this is done by 1
   - ./scripts/3_run_razzo.sh
-  - #./scripts/5_create_nltt_files.sh
-  - # No need to install NS: this is done by 1
-  - #./scripts/6_create_marg_lik_files.sh
   - #./scripts/7_create_nltt_stats_file.sh
   - #./scripts/8_create_esses_files.sh
   - #./scripts/9_create_marg_liks_file.sh
