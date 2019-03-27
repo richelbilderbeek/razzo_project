@@ -12,8 +12,6 @@ r_github_packages:
   - jimhester/lintr
   - KlausVigo/phangorn
   - Giappo/mbd
-  - ropensci/beautier
-  - ropensci/tracerer
   - ropensci/beastier
   - ropensci/mauricer
   - ropensci/babette
