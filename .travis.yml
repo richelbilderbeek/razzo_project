@@ -12,7 +12,8 @@ r_github_packages:
   - jimhester/lintr
   - KlausVigo/phangorn
   - Giappo/mbd
-  - ropensci/beastier
+  - ropensci/beautier@develop
+  - ropensci/beastier@develop
   - ropensci/mauricer
   - ropensci/babette
   - richelbilderbeek/nLTT
