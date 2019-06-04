@@ -12,13 +12,10 @@ r_github_packages:
   - jimhester/lintr
   - KlausVigo/phangorn
   - Giappo/mbd
-  - ropensci/beautier@develop
-  - ropensci/beastier@develop
   - ropensci/mauricer
   - ropensci/babette
-  - richelbilderbeek/nLTT
   - richelbilderbeek/mcbette
-  - richelbilderbeek/pirouette@richel
+  - richelbilderbeek/pirouette
   - richelbilderbeek/razzo@richel
   - MangoTheCat/goodpractice
   - ropensci/spelling
@@ -42,7 +39,7 @@ script:
   - ./scripts/2_create_parameter_files.sh
   - # No need to install BEAST2, nor NS: this is done by 1
   - ./scripts/3_run_razzo.sh
-  - #./scripts/7_create_nltt_stats_file.sh
+  - ./scripts/7_create_nltt_stats_file.sh
   - #./scripts/8_create_esses_files.sh
   - #./scripts/9_create_marg_liks_file.sh
   - #./scripts/10_create_fig_1_file.sh
