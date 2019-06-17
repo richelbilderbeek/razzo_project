@@ -11,6 +11,7 @@
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 module load R
+module load MPFR
 for filename in $(find . | egrep "parameters\.RDa")
 do
   echo $filename

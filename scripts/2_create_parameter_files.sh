@@ -1,5 +1,14 @@
 #!/bin/bash
 # Create input files
+#
+# Usage, locally:
+#
+#   ./scripts/2_create_parameter_files
+#
+# Usage, on Peregrine:
+#
+#   sbatch ./scripts/2_create_parameter_files
+#
 # Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
