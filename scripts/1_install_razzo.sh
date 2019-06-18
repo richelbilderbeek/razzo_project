@@ -1,6 +1,16 @@
 #!/bin/bash
 # Script to install razzo and its dependencies
 # on the Peregrine computer cluster
+#
+# Usage, locally:
+#
+#   ./scripts/1_install_razzo
+#
+# Usage, on Peregrine:
+#
+#   sbatch ./scripts/1_install_razzo
+#
+# Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1

@@ -1,5 +1,14 @@
 #!/bin/bash
 # Create file with all collected ESSes
+#
+# Usage, locally:
+#
+#   ./scripts/8_create_esses_file
+#
+# Usage, on Peregrine:
+#
+#   sbatch ./scripts/8_create_esses_file
+#
 # Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1

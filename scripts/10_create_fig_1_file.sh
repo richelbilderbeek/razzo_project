@@ -1,5 +1,14 @@
 #!/bin/bash
 # Create file for figure 1
+#
+# Usage, locally:
+#
+#   ./scripts/10_create_fig_1_file
+#
+# Usage, on Peregrine:
+#
+#   sbatch ./scripts/10_create_fig_1_file
+#
 # Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1

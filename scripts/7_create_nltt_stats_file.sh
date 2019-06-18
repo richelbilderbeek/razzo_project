@@ -1,5 +1,14 @@
 #!/bin/bash
-# Create input files
+# Combine all generated nLTT files to one nLTT file in results
+#
+# Usage, locally:
+#
+#   ./scripts/7_create_nltt_stats_file
+#
+# Usage, on Peregrine:
+#
+#   sbatch ./scripts/7_create_nltt_stats_file
+#
 # Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1

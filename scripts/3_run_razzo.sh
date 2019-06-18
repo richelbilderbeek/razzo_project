@@ -1,5 +1,14 @@
 #!/bin/bash
 # Create input files
+#
+# Usage, locally:
+#
+#   ./scripts/3_run_razzo
+#
+# Usage, on Peregrine:
+#
+#   sbatch ./scripts/3_run_razzo
+#
 # Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1

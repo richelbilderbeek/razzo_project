@@ -1,4 +1,15 @@
 #!/bin/bash
+#
+# Check for dead/broken links
+#
+# Usage, locally:
+#
+#   ./scripts/check_dead_links
+#
+# Usage, on Peregrine:
+#
+#   sbatch ./scripts/check_dead_links
+#
 
 # Collect all dead links in a file
 find . -name \*.md -exec markdown-link-check {} \; 2>/dev/null | egrep "[✖]" > broken.txt
