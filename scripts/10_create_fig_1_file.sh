@@ -20,4 +20,8 @@
 module load GCCcore/4.9.3 
 module load XZ/5.2.2-foss-2016a
 module load R
-Rscript -e 'razzo::create_fig_1_file()'
+module load ImageMagick
+module load X11
+module load cairo
+echo "xvfb-run Rscript $@"
+xvfb-run Rscript -e 'razzo::create_fig_1_file()'
