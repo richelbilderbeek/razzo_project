@@ -7,13 +7,18 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 `razzo` experiment scripts and storage.
 
-Has the following folder structure:
+## Results
+
+![](results/figure_1.png)
+
+## Folder structure
+
+`razzo_project` has the following folder structure:
 
  * `scripts`: contains the scripts
 
-Should create the following folder structure:
+The scripts in `scripts` create the following extra folders:
 
- * `scripts`: contains the scripts
  * `data`: contains the simulation data
  * `results`: contains the simulation results
 
@@ -29,18 +34,15 @@ Run the razzo experiment:
 
  * `sbatch ./scripts/1_install_razzo.sh`
  * `sbatch ./scripts/2_create_parameter_files.sh`
+ * `sbatch ./scripts/3_run_razzo.sh`
+ * `sbatch ./scripts/7_create_nltt_stats_file.sh`
+ * `sbatch ./scripts/8_create_esses_files.sh`
+ * `sbatch ./scripts/9_create_marg_liks_file.sh`
+ * `sbatch ./scripts/10_create_fig_1_file.sh`
 
 ## Local usage
 
- * `./scripts/1_install_razzo.sh`
- * `./scripts/2_create_parameter_files.sh`
- * `./scripts/3_create_input_files.sh`
- * `./scripts/5_create_nltt_files.sh`
- * `./scripts/6_create_marg_lik_files.sh`
- * `./scripts/7_create_nltt_stats_file.sh`
- * `./scripts/8_create_esses_file.sh`
- * `./scripts/9_create_marg_liks_file.sh`
- * `./scripts/10_create_fig_1_file.sh`
+Same, but without `sbatch`.
 
 See [.travis.yml](.travis.yml) for the complete usage.
 

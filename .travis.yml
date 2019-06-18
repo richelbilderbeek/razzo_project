@@ -35,14 +35,7 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'; fi
 
 script:
-  - ./scripts/1_install_razzo.sh
-  - ./scripts/2_create_parameter_files.sh
-  - # No need to install BEAST2, nor NS: this is done by 1
-  - ./scripts/3_run_razzo.sh
-  - ./scripts/7_create_nltt_stats_file.sh
-  - #./scripts/8_create_esses_files.sh
-  - #./scripts/9_create_marg_liks_file.sh
-  - #./scripts/10_create_fig_1_file.sh
+  - ./scripts/regen_data.sh
 
 after_success:
   - pwd
