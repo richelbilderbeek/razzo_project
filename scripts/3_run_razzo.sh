@@ -21,6 +21,19 @@ module load GCCcore/4.9.3
 module load XZ/5.2.2-foss-2016a
 module load R
 module load MPFR
+
+
+echo "Host name: "$HOSTNAME
+
+if [ "$HOSTNAME" == "peregrine" ]; 
+then
+  echo "On Peregrine"
+else
+  echo "On some environment"
+fi
+
+exit
+
 for filename in $(find . | egrep "parameters\.RDa")
 do
   echo $filename
