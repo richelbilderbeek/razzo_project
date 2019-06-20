@@ -24,6 +24,6 @@ module load MPFR
 for filename in $(find . | egrep "parameters\.RDa")
 do
   echo $filename
-  sbatch ./scripts/run_r_script "razzo::run_razzo_from_file(\"$filename\")"
+  sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
 done
 
