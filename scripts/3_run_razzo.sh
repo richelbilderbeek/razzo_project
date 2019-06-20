@@ -22,21 +22,45 @@ module load XZ/5.2.2-foss-2016a
 module load R
 module load MPFR
 
-
 echo "Host name: "$HOSTNAME
 
-if [ "$HOSTNAME" == "peregrine" ]; 
-then
-  echo "On Peregrine"
+if [[ "$HOSTNAME" == "peregrine.hpc.rug.nl" ]]; then
+
+  echo "On Peregrine, login node"
+  for filename in $(find . | egrep "parameters\.RDa")
+  do
+    echo $filename
+    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+  done
+
+elif [[ "$HOSTNAME" =~ ^pg-node.*$ ]]; then
+
+  echo "On Peregrine, worker node"
+  for filename in $(find . | egrep "parameters\.RDa")
+  do
+    echo $filename
+    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+  done
+
+elif [[ "$HOSTNAME" == "sonic" ]]; then
+
+  echo "Working from laptop"
+  for filename in $(find . | egrep "parameters\.RDa")
+  do
+    echo $filename
+    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+  done
+
 else
-  echo "On some environment"
+
+  echo "On some unknown environment"
+  for filename in $(find . | egrep "parameters\.RDa")
+  do
+    echo $filename
+    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+  done
+
 fi
 
-exit
 
-for filename in $(find . | egrep "parameters\.RDa")
-do
-  echo $filename
-  sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
-done
 
