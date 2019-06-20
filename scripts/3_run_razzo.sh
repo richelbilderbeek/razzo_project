@@ -1,5 +1,5 @@
 #!/bin/bash
-# Create input files
+# Runs the experiment with one job per parameter file.
 #
 # Usage, locally:
 #
@@ -24,6 +24,6 @@ module load MPFR
 for filename in $(find . | egrep "parameters\.RDa")
 do
   echo $filename
-  Rscript -e 'razzo::run_razzo_from_file("'$filename'")'
+  sbatch run_r_script "razzo::run_razzo_from_file(\"$filename\")"
 done
 
