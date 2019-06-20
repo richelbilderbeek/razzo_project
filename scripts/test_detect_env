@@ -20,11 +20,14 @@
 
 echo "Host name: "$HOSTNAME
 
-if [ "$HOSTNAME" == "peregrine" ]; then
-  echo "On Peregrine"
-elif  [ "$HOSTNAME" == "sonic" ]; then
+if [[ "$HOSTNAME" == "peregrine.hpc.rug.nl" ]]; then
+  echo "On Peregrine, login node"
+elif [[ "$HOSTNAME" =~ "^pg-node.*" ]]; then
+  echo "On Peregrine, worker node"
+elif [[ "$HOSTNAME" == "sonic" ]]; then
   echo "Working from laptop"
 else
   echo "On some unknown environment"
 fi
+
 
