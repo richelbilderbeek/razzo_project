@@ -20,10 +20,9 @@
 
 echo "Host name: "$HOSTNAME
 
-if [ "$HOSTNAME" == "peregrine" ]; 
-then
+if [ "$HOSTNAME" == "peregrine" ]; then
   echo "On Peregrine"
-elif  [ "$HOSTNAME" == "sonic" ];
+elif  [ "$HOSTNAME" == "sonic" ]; then
   echo "Working from laptop"
 else
   echo "On some unknown environment"
