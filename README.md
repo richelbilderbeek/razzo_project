@@ -7,6 +7,15 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 `razzo` experiment scripts and storage.
 
+## Data
+
+ * [20190620_2](http://richelbilderbeek.nl/razzo_project_20190620_2.zip)
+   1 replicates, crown age = 6, MCMC = 3k
+ * [20190620_3](http://richelbilderbeek.nl/razzo_project_20190620_3.zip)
+   2 replicates, crown age = 6, MCMC = 3k
+ * [20190621](http://richelbilderbeek.nl/razzo_project_20190621.zip): 
+   2 replicates, crown age = 6, MCMC = 100k
+
 ## Results
 
 ![](results/figure_1.png)
