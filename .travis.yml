@@ -15,6 +15,7 @@ r_github_packages:
   - ropensci/mauricer
   - ropensci/babette
   - richelbilderbeek/mcbette
+  - richelbilderbeek/peregrine
   - richelbilderbeek/pirouette
   - richelbilderbeek/razzo@richel
   - MangoTheCat/goodpractice
