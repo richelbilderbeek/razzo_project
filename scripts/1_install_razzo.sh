@@ -18,8 +18,6 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=1_install_razzo
 #SBATCH --output=1_install_razzo.log
-module load GCCcore/4.9.3 
-module load XZ/5.2.2-foss-2016a
 module load R
 Rscript -e 'devtools::install_github("ropensci/beautier")'
 Rscript -e 'devtools::install_github("ropensci/tracerer")'
@@ -29,6 +27,7 @@ Rscript -e 'devtools::install_github("ropensci/babette")'
 Rscript -e 'devtools::install_github("richelbilderbeek/pirouette", ref = "richel")'
 Rscript -e 'devtools::install_github("Giappo/mbd")'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys")'
+Rscript -e 'devtools::install_github("richelbilderbeek/peregrine", ref = "richel")'
 Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "richel")'
 Rscript -e 'beastier::install_beast2()'
 Rscript -e 'mauricer::install_beast2_pkg("NS")' || true
