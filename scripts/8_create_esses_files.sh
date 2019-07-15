@@ -17,7 +17,5 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=8_create_esses_file
 #SBATCH --output=8_create_esses_file.log
-module load GCCcore/4.9.3 
-module load XZ/5.2.2-foss-2016a
 module load R
 Rscript -e 'razzo::create_esses_file()'

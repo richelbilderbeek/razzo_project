@@ -17,7 +17,5 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=7_create_nltt_stats_file
 #SBATCH --output=7_create_nltt_stats_file.log
-module load GCCcore/4.9.3 
-module load XZ/5.2.2-foss-2016a
 module load R
 Rscript -e 'razzo::create_nltt_stats_file()'
