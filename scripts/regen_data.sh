@@ -44,4 +44,5 @@ time ./scripts/3_run_razzo.sh test
 time ./scripts/7_create_nltt_stats_file.sh
 time ./scripts/8_create_esses_files.sh
 time ./scripts/9_create_marg_liks_file.sh
-# time ./scripts/10_create_fig_1_file.sh
+time ./scripts/10_create_fig_1_file.sh
+time ./scripts/11_create_n_taxa_file.sh
