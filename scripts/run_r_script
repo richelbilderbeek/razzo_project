@@ -12,8 +12,6 @@
 #SBATCH --mem=10G
 #SBATCH --job-name=run_r_script
 #SBATCH --output=run_r_script_%j.log
-module load GCCcore/4.9.3
-module load XZ/5.2.2-foss-2016a
 module load R
 module load ImageMagick
 echo "Rscript $@"

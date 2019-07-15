@@ -17,11 +17,11 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=10_create_fig_1_file
 #SBATCH --output=10_create_fig_1_file.log
-module load GCCcore/4.9.3 
-module load XZ/5.2.2-foss-2016a
 module load R
 module load ImageMagick
 module load X11
 module load cairo
+module load libX11
+module load xprop
 echo "xvfb-run Rscript $@"
 xvfb-run Rscript -e 'razzo::create_fig_1_file()'
