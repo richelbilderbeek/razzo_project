@@ -24,11 +24,17 @@ module load MPFR
 echo "Host name: "$HOSTNAME
 
 # Collect the filenames
+filenames=$(cat $(egrep -Rl FAILED | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|.\/|$PWD\/|" | sed -e "s|\"||g")
+
+#for filename in $filenames
+#do
+#  echo $filename
+#done
 
 if [[ "$HOSTNAME" == "peregrine.hpc.rug.nl" ]]; then
 
   echo "On Peregrine, login node"
-  for filename in $(cat $(egrep -Rl FAILED | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|.\/|$PWD\/|" | sed -e "s|\"||g")
+  for filename in $filenames
   do
     echo $filename
     sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
@@ -37,7 +43,7 @@ if [[ "$HOSTNAME" == "peregrine.hpc.rug.nl" ]]; then
 elif [[ "$HOSTNAME" =~ ^pg-node.*$ ]]; then
 
   echo "On Peregrine, worker node"
-  for filename in $(cat $(egrep -Rl FAILED | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|.\/|$PWD\/|" | sed -e "s|\"||g")
+  for filename in $filenames
   do
     echo $filename
     sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
@@ -46,7 +52,7 @@ elif [[ "$HOSTNAME" =~ ^pg-node.*$ ]]; then
 elif [[ "$HOSTNAME" == "sonic" ]]; then
 
   echo "Working from laptop"
-  for filename in $(cat $(egrep -Rl FAILED | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|.\/|$PWD\/|" | sed -e "s|\"||g")
+  for filename in $filenames
   do
     echo $filename
     ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
@@ -55,14 +61,10 @@ elif [[ "$HOSTNAME" == "sonic" ]]; then
 else
 
   echo "On some unknown environment"
-  for filename in $(cat $(egrep -Rl FAILED | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|.\/|$PWD\/|" | sed -e "s|\"||g")
+  for filename in $filenames
   do
     echo $filename
     ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
   done
 
 fi
-
-
-
-
