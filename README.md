@@ -15,6 +15,8 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
    2 replicates, crown age = 6, MCMC = 3k
  * [20190621](http://richelbilderbeek.nl/razzo_project_20190621.zip): 
    2 replicates, crown age = 6, MCMC = 100k
+ * [20190717](http://richelbilderbeek.nl/razzo_project_20190717.zip): 
+   2 replicates, crown age = 6, MCMC = 111k
 
 ## Results
 
