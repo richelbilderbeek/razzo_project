@@ -17,8 +17,6 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=3_run_razzo
 #SBATCH --output=3_run_razzo.log
-module load GCCcore/4.9.3 
-module load XZ/5.2.2-foss-2016a
 module load R
 module load MPFR
 

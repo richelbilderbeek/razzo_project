@@ -31,8 +31,6 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=2_create_parameter_files
 #SBATCH --output=2_create_parameter_files.log
-module load GCCcore/4.9.3 
-module load XZ/5.2.2-foss-2016a
 module load R
 
 experiment_type=$1

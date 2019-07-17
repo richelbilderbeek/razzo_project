@@ -31,5 +31,5 @@ Rscript -e 'devtools::install_github("Giappo/mbd")'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys")'
 Rscript -e 'devtools::install_github("richelbilderbeek/peregrine", ref = "richel")'
 Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "richel")'
-Rscript -e 'beastier::install_beast2()'
-Rscript -e 'mauricer::install_beast2_pkg("NS")' || true
+Rscript -e 'if (!beastier::is_beast2_installed()) beastier::install_beast2()'
+Rscript -e 'if (!mauricer::is_beast2_pkg_installed("NS")) mauricer::install_beast2_pkg("NS")'
