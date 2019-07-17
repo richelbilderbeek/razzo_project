@@ -26,10 +26,15 @@ echo "Host name: "$HOSTNAME
 # Collect the filenames
 filenames=$(cat $(egrep -Rl FAILED | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|.\/|$PWD\/|" | sed -e "s|\"||g")
 
-#for filename in $filenames
-#do
-#  echo $filename
-#done
+for filename in $filenames
+do
+  echo $filename
+  if [ ! -f $filename ]
+  then
+    echo "File $filename not found!"
+    exit 1
+  fi
+done
 
 if [[ "$HOSTNAME" == "peregrine.hpc.rug.nl" ]]; then
 
