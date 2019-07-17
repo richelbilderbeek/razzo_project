@@ -37,7 +37,7 @@ if [[ "$HOSTNAME" == "peregrine.hpc.rug.nl" ]]; then
   for filename in $filenames
   do
     echo $filename
-    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\", add_verbose = TRUE)"
   done
 
 elif [[ "$HOSTNAME" =~ ^pg-node.*$ ]]; then
@@ -46,7 +46,7 @@ elif [[ "$HOSTNAME" =~ ^pg-node.*$ ]]; then
   for filename in $filenames
   do
     echo $filename
-    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\", add_verbose = TRUE)"
   done
 
 elif [[ "$HOSTNAME" == "sonic" ]]; then
@@ -55,7 +55,7 @@ elif [[ "$HOSTNAME" == "sonic" ]]; then
   for filename in $filenames
   do
     echo $filename
-    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\", add_verbose = TRUE)"
   done
 
 else
@@ -64,7 +64,7 @@ else
   for filename in $filenames
   do
     echo $filename
-    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
+    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\", add_verbose = TRUE)"
   done
 
 fi
