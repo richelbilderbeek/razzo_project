@@ -18,8 +18,8 @@ r_github_packages:
   - ropensci/mauricer
   - ropensci/babette
   - richelbilderbeek/mcbette
-  - richelbilderbeek/peregrine@develop
   - richelbilderbeek/pirouette@richel
+  - richelbilderbeek/peregrine@develop
   - richelbilderbeek/razzo@richel
   - MangoTheCat/goodpractice
   - ropensci/spelling
