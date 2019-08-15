@@ -26,7 +26,7 @@ echo "Host name: "$HOSTNAME
 # Collect the filenames
 
 
-filenames=$(cat $(egrep -Rl FAILED | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|\"||g" | egrep -v "^\./data" | sort | uniq)
+filenames=$(cat $(egrep -Rl "(FAILED|CANCELLED|TIMEOUT)" | egrep "^run_") | egrep "parameters\.RDa" | egrep -o "\".*\"" | sed -e "s|\"||g" | egrep -v "^\./data" | sort | uniq)
 
 for filename in $filenames
 do
