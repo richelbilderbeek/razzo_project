@@ -24,6 +24,8 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
    bug as described in pirouette Issue #309
  * [20190808](http://richelbilderbeek.nl/razzo_project_20190808.zip): 
    2 replicates, crown age = 6, MCMC = 111k, twin alignment has equal amount of mutations
+ * [20190815](http://richelbilderbeek.nl/razzo_project_20190815.zip): 
+   2 replicates, crown age = 7, MCMC = 111k, twin alignment has equal amount of mutations
 
 ## Results
 
