@@ -53,12 +53,13 @@ Regenerate testing data:
 Run the razzo experiment:
 
  * `sbatch ./scripts/1_install_razzo.sh`
- * `sbatch ./scripts/2_create_parameter_files.sh`
+ * `sbatch ./scripts/2_create_parameter_files.sh test` or `sbatch ./scripts/2_create_parameter_files.sh ful`
  * `sbatch ./scripts/3_run_razzo.sh`
  * `sbatch ./scripts/7_create_nltt_stats_file.sh`
  * `sbatch ./scripts/8_create_esses_files.sh`
  * `sbatch ./scripts/9_create_marg_liks_file.sh`
  * `sbatch ./scripts/10_create_fig_1_file.sh`
+ * `sbatch ./scripts/11_create_n_taxa_file.sh`
 
 ## Local usage
 
