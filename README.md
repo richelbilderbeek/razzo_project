@@ -36,7 +36,14 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ### 20190828
 
-![](pics/20190828_fig_1.png)
+#### Oldskool
+
+![](pics/20190829_figure_1_oldskool.png)
+
+Only shows candidate
+
+#### Newschool
+
 ![](pics/20190829_figure_1a.png)
 ![](pics/20190829_figure_1b.png)
 
