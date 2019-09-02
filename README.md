@@ -28,14 +28,17 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
    2 replicates, crown age = 7, MCMC = 111k, twin alignment has equal amount of mutations
  * [20190827](http://richelbilderbeek.nl/razzo_project_20190827.zip): 
    2 replicates, crown age = 7, MCMC = ?100k, twin alignment has equal amount of mutations
- * [20190829](http://richelbilderbeek.nl/razzo_project_20190829_unfinished.zip)
-   and [results](http://richelbilderbeek.nl/razzo_project_20190829_results.zip):
+ * [20190829](http://richelbilderbeek.nl/razzo_project_20190829.zip):
    2 replicates, crown age = 6, MCMC = ?100k, twin alignment has equal amount of mutations,
    all 39 candidate models. 
 
 ## Results
 
-![](results/figure_1.png)
+### 20190828
+
+![](20190828_fig_1.png)
+![](20190829_figure_1a.png)
+![](20190829_figure_1b.png)
 
 ## Folder structure
 

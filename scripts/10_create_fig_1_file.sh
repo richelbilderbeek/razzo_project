@@ -9,6 +9,9 @@
 #
 #   sbatch ./scripts/10_create_fig_1_file
 #
+# Note that the output on Peregrine will look bad. Prefer to run this script 
+# locally.
+#
 # Peregrine directives:
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
@@ -23,5 +26,5 @@ module load X11
 module load cairo
 module load libX11
 module load xprop
-echo "xvfb-run Rscript $@"
-xvfb-run Rscript -e 'razzo::create_fig_1_file()'
+echo "Rscript $@"
+Rscript -e 'razzo::create_fig_1_file()'
