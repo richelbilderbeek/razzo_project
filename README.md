@@ -36,9 +36,9 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ### 20190828
 
-![](20190828_fig_1.png)
-![](20190829_figure_1a.png)
-![](20190829_figure_1b.png)
+![](pics/20190828_fig_1.png)
+![](pics/20190829_figure_1a.png)
+![](pics/20190829_figure_1b.png)
 
 ## Folder structure
 
