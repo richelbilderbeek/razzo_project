@@ -26,5 +26,5 @@ module load X11
 module load cairo
 module load libX11
 module load xprop
-echo "Rscript create_fig_n_taxa.R"
-Rscript create_fig_n_taxa.R
+echo "Rscript scripts/create_fig_n_taxa.R"
+Rscript scripts/create_fig_n_taxa.R
