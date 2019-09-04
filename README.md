@@ -10,30 +10,42 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 ## Data
 
  * [20190620_2](http://richelbilderbeek.nl/razzo_project_20190620_2.zip)
-   1 replicates, crown age = 6, MCMC = 3k
+   1 replicates, crown age = 6, MCMC = 3k,
+   2 candidate models
  * [20190620_3](http://richelbilderbeek.nl/razzo_project_20190620_3.zip)
-   2 replicates, crown age = 6, MCMC = 3k
+   2 replicates, crown age = 6, MCMC = 3k,
+   2 candidate models
  * [20190621](http://richelbilderbeek.nl/razzo_project_20190621.zip): 
-   2 replicates, crown age = 6, MCMC = 100k
+   2 replicates, crown age = 6, MCMC = 100k,
+   2 candidate models
  * [20190717](http://richelbilderbeek.nl/razzo_project_20190717.zip): 
-   2 replicates, crown age = 6, MCMC = 111k
+   2 replicates, crown age = 6, MCMC = 111k,
+   2 candidate models
  * [20190719 (FAILED RUN)](http://richelbilderbeek.nl/razzo_project_20190719.zip): 
-   2 replicates, crown age = 6, MCMC = 111k
+   2 replicates, crown age = 6, MCMC = 111k,
+   2 candidate models
  * [20190801](http://richelbilderbeek.nl/razzo_project_20190801.zip): 
    2 replicates, crown age = 6, MCMC = 111k, twin alignment has equal amount of mutations,
-   bug as described in pirouette Issue #309
+   bug as described in pirouette Issue #309,
+   2 candidate models
  * [20190808](http://richelbilderbeek.nl/razzo_project_20190808.zip): 
-   2 replicates, crown age = 6, MCMC = 111k, twin alignment has equal amount of mutations
+   2 replicates, crown age = 6, MCMC = 111k, twin alignment has equal amount of mutations,
+   2 candidate models
  * [20190815](http://richelbilderbeek.nl/razzo_project_20190815.zip): 
-   2 replicates, crown age = 7, MCMC = 111k, twin alignment has equal amount of mutations
+   2 replicates, crown age = 7, MCMC = 111k, twin alignment has equal amount of mutations,
+   2 candidate models
  * [20190827](http://richelbilderbeek.nl/razzo_project_20190827.zip): 
-   2 replicates, crown age = 7, MCMC = ?100k, twin alignment has equal amount of mutations
+   2 replicates, crown age = 7, MCMC = ?100k, twin alignment has equal amount of mutations,
+   2 candidate models
  * [20190829](http://richelbilderbeek.nl/razzo_project_20190829.zip):
    2 replicates, crown age = 6, MCMC = ?100k, twin alignment has equal amount of mutations,
    all 39 candidate models. 
  * [20190903](http://richelbilderbeek.nl/razzo_project_20190903.zip):
-   2 replicates, crown age = 5, MCMC = ?100k, twin alignment has equal amount of mutations,
+   2 replicates, crown age = ?5, MCMC = ?100k, twin alignment has equal amount of mutations,
    all 39 candidate models. 
+ * [20190904](http://richelbilderbeek.nl/razzo_project_20190904.zip):
+   2 replicates, crown age = 6, MCMC = ?100k, twin alignment has equal amount of mutations,
+   3 candidate models. 
 
 ## Results
 
