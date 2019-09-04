@@ -45,6 +45,9 @@ time ./scripts/7_create_nltt_stats_file.sh
 time ./scripts/8_create_esses_files.sh
 time ./scripts/9_create_marg_liks_file.sh
 time ./scripts/11_create_n_taxa_file.sh
+time ./scripts/12_create_run_times_file.sh
 
-# This one is shakey, do it last
-time ./scripts/10_create_fig_1_file.sh
+# Shakey
+time ./scripts/80_create_fig_1_file.sh
+time ./scripts/81_create_fig_n_taxa.sh
+
