@@ -9,13 +9,20 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ## Data
 
-Date                                                             |n replicates|Crown age|MCMC chain length|Number of candidate models
------------------------------------------------------------------|------------|---------|-----------------|--------------------------
-[20190808](http://richelbilderbeek.nl/razzo_project_20190808.zip)|2           |6        |111k             |2
-[20190815](http://richelbilderbeek.nl/razzo_project_20190815.zip)|2 replicates|7        |111k             |2
-[20190829](http://richelbilderbeek.nl/razzo_project_20190829.zip)|2 replicates|6        |?100k            |39
-[20190903](http://richelbilderbeek.nl/razzo_project_20190903.zip)|2 replicates|?5       |?100k            |39
-[20190904](http://richelbilderbeek.nl/razzo_project_20190904.zip)|2 replicates|6        |?100k            |3
+Date                                                                                                          |n replicates|Crown age|MCMC chain length|Number of candidate models
+--------------------------------------------------------------------------------------------------------------|------------|---------|-----------------|--------------------------
+[20190808](http://richelbilderbeek.nl/razzo_project_20190808.zip)                                             |2           |6        |111k             |2 [*]
+[20190815](http://richelbilderbeek.nl/razzo_project_20190815.zip)                                             |2           |7        |111k             |2
+[20190829](http://richelbilderbeek.nl/razzo_project_20190829.zip)                                             |2           |6        |?100k            |39
+[20190903](http://richelbilderbeek.nl/razzo_project_20190903.zip)                                             |2           |?5       |?100k            |39
+[20190904](http://richelbilderbeek.nl/razzo_project_20190904.zip)                                             |2           |6        |?100k            |3
+[20190905](http://richelbilderbeek.nl/razzo_project_20190905_unfinished_preliminary_results.zip) (unfinished) |10          |6        |?100k            |3
+
+Number of candidate models|Setup ([see Issue](https://github.com/richelbilderbeek/razzo/issues/261))
+--------------------------|------------------------
+2                         |1: Old skool
+39                        |2: All candidate models
+3                         |3: Richel's setup
 
 ## Results
 
