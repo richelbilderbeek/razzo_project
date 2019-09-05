@@ -17,18 +17,30 @@ library(ggplot2)
 f_below <- sum(df$ess_likelihood < 200) / nrow(df)
 f_below
 
+library(plyr)
+
 ggplot(df, aes(ess_likelihood)) +
-  geom_histogram(binwidth = 10, fill = "white", col = "black") +
+  geom_histogram(binwidth = 10, alpha = 0.5, position="identity") +
   geom_vline(xintercept = 200, col = "black", lty = "dashed") +
-  geom_vline(xintercept = mean(df$ess_likelihood), col = "red") +
-  geom_vline(xintercept = median(df$ess_likelihood), col = "blue") +
+  geom_vline(
+    data = ddply(df, NULL, summarize, mean = mean(ess_likelihood)),
+    aes(xintercept = mean)
+  ) +
+#  geom_vline(
+#    data = ddply(df, .(tree, best_or_gen), summarize, mean = mean(ess_likelihood)),
+#    aes(xintercept = mean, col = tree)
+#  ) +
+#  geom_vline(
+#    data = ddply(df, .(tree, best_or_gen), summarize, median = median(ess_likelihood)),
+#    aes(xintercept = median, col = tree), lty = "dashed"
+#  ) +
+#  ggplot2::facet_grid(. ~ best_or_gen) +
   labs(
     title = "Effective sample sizes of likelihood estimation",
     subtitle = "Absolute values",
     caption = paste0(
-      "Dashed black line: recommended value. ",
-      "Blue: median. ",
-      "Red: mean. ",
+      "Dashed black line: recommended ESS. ",
+      "Solid line: mean ESS. ",
       "n =  ", nrow(df), ". ",
       "ESSes < 200: ", round(f_below * 100), "%"
     ),
@@ -68,9 +80,9 @@ for (i in seq_along(esses_sum_cnt)) {
 }
 esses_sum_cnt
 
-df <- data.frame(value = esses, count = esses_cnt, cumulative = esses_sum_cnt)
+df_cumulative <- data.frame(value = esses, count = esses_cnt, cumulative = esses_sum_cnt)
 
-ggplot(df, aes(x = value, y = 100.0 * esses_sum_cnt / length(esses))) + geom_line() +
+ggplot(df_cumulative, aes(x = value, y = 100.0 * esses_sum_cnt / length(esses))) + geom_line() +
   geom_vline(xintercept = 200, lty = "dashed") +
   labs(
     title = "Effective sample sizes of likelihood estimation",
@@ -84,4 +96,3 @@ ggplot(df, aes(x = value, y = 100.0 * esses_sum_cnt / length(esses))) + geom_lin
     )
   ) +
   ggsave(fig_esses_cumulative_filename, width = 7, height = 7)
-
