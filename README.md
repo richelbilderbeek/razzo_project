@@ -9,32 +9,23 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ## Data
 
-Date                                                                                                          |n replicates|Crown age|MCMC chain length|Number of candidate models
---------------------------------------------------------------------------------------------------------------|------------|---------|-----------------|--------------------------
-[20190808](http://richelbilderbeek.nl/razzo_project_20190808.zip)                                             |2           |6        |111k             |2 [*]
-[20190815](http://richelbilderbeek.nl/razzo_project_20190815.zip)                                             |2           |7        |111k             |2
-[20190829](http://richelbilderbeek.nl/razzo_project_20190829.zip)                                             |2           |6        |?100k            |39
-[20190903](http://richelbilderbeek.nl/razzo_project_20190903.zip)                                             |2           |?5       |?100k            |39
-[20190904](http://richelbilderbeek.nl/razzo_project_20190904.zip)                                             |2           |6        |?100k            |3
-[20190905](http://richelbilderbeek.nl/razzo_project_20190905_unfinished_preliminary_results.zip) (unfinished) |10          |6        |?100k            |3
 
-Number of candidate models|Setup ([see Issue](https://github.com/richelbilderbeek/razzo/issues/261))
---------------------------|------------------------
-2                         |1: Old skool
-39                        |2: All candidate models
-3                         |3: Richel's setup
+|date                                                          | mean_runtime_hours| crown_age| n_candidates| mcmc_chain_length| n_replicates| mean_n_taxa| mean_ess|
+|:-------------------------------------------------------------|------------------:|---------:|------------:|-----------------:|------------:|-----------:|--------:|
+|[20190801](http://richelbilderbeek.nl/razzo_project_20190801) |          0.6439931|         6|            3|           1111000|            2|    26.81250| 552.0521|
+|[20190808](http://richelbilderbeek.nl/razzo_project_20190808) |          0.6791088|         6|            3|           1111000|            2|    26.81250| 541.2969|
+|[20190815](http://richelbilderbeek.nl/razzo_project_20190815) |          1.6287905|         7|            3|           1111000|            2|    56.75000| 463.0667|
+|[20190829](http://richelbilderbeek.nl/razzo_project_20190829) |          3.3101975|         6|           40|           1000000|            2|    26.81250| 421.7337|
+|[20190903](http://richelbilderbeek.nl/razzo_project_20190903) |          4.1418981|         6|           40|           1000000|            2|    26.81250| 429.4056|
+|[20190904](http://richelbilderbeek.nl/razzo_project_20190904) |          0.6348322|         6|            4|           1000000|            2|    26.81250| 478.9740|
+|[20190905](http://richelbilderbeek.nl/razzo_project_20190905) |          0.6264041|         6|            4|           1000000|           10|    28.33333| 502.4483|
 
 ## Results
 
+![](pics/20190905_figure_1a.png)
+![](pics/20190905_figure_1b.png)
+
 ### 20190828
-
-#### Oldskool
-
-![](pics/20190829_figure_1_oldskool.png)
-
-Only shows candidate
-
-#### Newschool
 
 ![](pics/20190829_figure_1a.png)
 ![](pics/20190829_figure_1b.png)
