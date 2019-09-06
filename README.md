@@ -24,6 +24,8 @@ To download the data,
 download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
 for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://richelbilderbeek.nl/razzo_project_20190801.zip)
 
+![](fig_run_times.png)
+
 ## Results
 
 ![](pics/20190905_figure_1a.png)

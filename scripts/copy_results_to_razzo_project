@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+# Copy all razzo results to ~/GitHubs/razzo_project/results subfolders
+#
+#
+# Must be run in ~/data folder
+#
+
+for foldername in $(ls -d razz*/)
+do
+  echo $foldername
+  from="${foldername::-1}/results"
+  echo $from
+  mkdir ~/GitHubs/razzo_project/results/$foldername
+  cp -r $from/*.* ~/GitHubs/razzo_project/results/$foldername
+done
