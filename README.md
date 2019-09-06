@@ -28,39 +28,75 @@ for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://rich
 
 ## Results
 
-Only figure 1b.
+### Figure 1b.
 
-### 20190801
+#### 20190801
 
 ![](results/razzo_project_20190801/figure_1b.png)
 
-### 20190808
+#### 20190808
 
 ![](results/razzo_project_20190808/figure_1b.png)
 
-### 20190815
+#### 20190815
 
 ![](results/razzo_project_20190815/figure_1b.png)
 
-### 20190829
+#### 20190829
 
 ![](results/razzo_project_20190829/figure_1b.png)
 
-### 20190903
+#### 20190903
 
 ![](results/razzo_project_20190903/figure_1b.png)
 
-### 20190904
+#### 20190904
 
 ![](results/razzo_project_20190904/figure_1b.png)
 
-### 20190905
+#### 20190905
 
 ![](results/razzo_project_20190905/figure_1b.png)
 
-### 20190906
+#### 20190906
 
 ![](results/razzo_project_20190906/figure_1b.png)
+
+### Marginal likelihoods
+
+#### 20190801
+
+![](results/razzo_project_20190801/fig_marg_likspng)
+
+#### 20190808
+
+![](results/razzo_project_20190808/fig_marg_likspng)
+
+#### 20190815
+
+![](results/razzo_project_20190815/fig_marg_likspng)
+
+#### 20190829
+
+![](results/razzo_project_20190829/fig_marg_likspng)
+
+#### 20190903
+
+![](results/razzo_project_20190903/fig_marg_likspng)
+
+#### 20190904
+
+![](results/razzo_project_20190904/fig_marg_likspng)
+
+#### 20190905
+
+![](results/razzo_project_20190905/fig_marg_likspng)
+
+#### 20190906
+
+![](results/razzo_project_20190906/fig_marg_likspng)
+
+
 
 ## Folder structure
 
