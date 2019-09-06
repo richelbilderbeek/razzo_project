@@ -9,16 +9,20 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ## Data
 
+|date     | mean_runtime_hours| crown_age| n_candidates| mcmc_chain_length| n_replicates| mean_n_taxa| mean_ess|
+|:--------|------------------:|---------:|------------:|-----------------:|------------:|-----------:|--------:|
+|20190801 |          0.6439931|         6|            3|           1111000|            2|    26.81250| 552.0521|
+|20190808 |          0.6791088|         6|            3|           1111000|            2|    26.81250| 541.2969|
+|20190815 |          1.6287905|         7|            3|           1111000|            2|    56.75000| 463.0667|
+|20190829 |          3.3101975|         6|           40|           1000000|            2|    26.81250| 421.7337|
+|20190903 |          4.1418981|         6|           40|           1000000|            2|    26.81250| 429.4056|
+|20190904 |          0.6348322|         6|            4|           1000000|            2|    26.81250| 478.9740|
+|20190905 |          0.6264041|         6|            4|           1000000|           10|    28.33333| 502.4483|
+|20190906 |          0.3879977|         5|            4|           1000000|            2|    17.66667| 610.8542|
 
-|date                                                          | mean_runtime_hours| crown_age| n_candidates| mcmc_chain_length| n_replicates| mean_n_taxa| mean_ess|
-|:-------------------------------------------------------------|------------------:|---------:|------------:|-----------------:|------------:|-----------:|--------:|
-|[20190801](http://richelbilderbeek.nl/razzo_project_20190801) |          0.6439931|         6|            3|           1111000|            2|    26.81250| 552.0521|
-|[20190808](http://richelbilderbeek.nl/razzo_project_20190808) |          0.6791088|         6|            3|           1111000|            2|    26.81250| 541.2969|
-|[20190815](http://richelbilderbeek.nl/razzo_project_20190815) |          1.6287905|         7|            3|           1111000|            2|    56.75000| 463.0667|
-|[20190829](http://richelbilderbeek.nl/razzo_project_20190829) |          3.3101975|         6|           40|           1000000|            2|    26.81250| 421.7337|
-|[20190903](http://richelbilderbeek.nl/razzo_project_20190903) |          4.1418981|         6|           40|           1000000|            2|    26.81250| 429.4056|
-|[20190904](http://richelbilderbeek.nl/razzo_project_20190904) |          0.6348322|         6|            4|           1000000|            2|    26.81250| 478.9740|
-|[20190905](http://richelbilderbeek.nl/razzo_project_20190905) |          0.6264041|         6|            4|           1000000|           10|    28.33333| 502.4483|
+To download the data, 
+download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
+for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://richelbilderbeek.nl/razzo_project_20190801.zip)
 
 ## Results
 
