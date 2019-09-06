@@ -66,35 +66,35 @@ for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://rich
 
 #### 20190801
 
-![](results/razzo_project_20190801/fig_marg_likspng)
+![](results/razzo_project_20190801/fig_marg_liks.png)
 
 #### 20190808
 
-![](results/razzo_project_20190808/fig_marg_likspng)
+![](results/razzo_project_20190808/fig_marg_liks.png)
 
 #### 20190815
 
-![](results/razzo_project_20190815/fig_marg_likspng)
+![](results/razzo_project_20190815/fig_marg_liks.png)
 
 #### 20190829
 
-![](results/razzo_project_20190829/fig_marg_likspng)
+![](results/razzo_project_20190829/fig_marg_liks.png)
 
 #### 20190903
 
-![](results/razzo_project_20190903/fig_marg_likspng)
+![](results/razzo_project_20190903/fig_marg_liks.png)
 
 #### 20190904
 
-![](results/razzo_project_20190904/fig_marg_likspng)
+![](results/razzo_project_20190904/fig_marg_liks.png)
 
 #### 20190905
 
-![](results/razzo_project_20190905/fig_marg_likspng)
+![](results/razzo_project_20190905/fig_marg_liks.png)
 
 #### 20190906
 
-![](results/razzo_project_20190906/fig_marg_likspng)
+![](results/razzo_project_20190906/fig_marg_liks.png)
 
 
 
