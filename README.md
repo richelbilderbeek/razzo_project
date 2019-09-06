@@ -28,13 +28,16 @@ for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://rich
 
 ## Results
 
-![](pics/20190905_figure_1a.png)
-![](pics/20190905_figure_1b.png)
+Only figure 1b.
 
-### 20190828
-
-![](pics/20190829_figure_1a.png)
-![](pics/20190829_figure_1b.png)
+![](results/razzo_project_20190801/figure_1b.png)
+![](results/razzo_project_20190808/figure_1b.png)
+![](results/razzo_project_20190815/figure_1b.png)
+![](results/razzo_project_20190829/figure_1b.png)
+![](results/razzo_project_20190903/figure_1b.png)
+![](results/razzo_project_20190904/figure_1b.png)
+![](results/razzo_project_20190905/figure_1b.png)
+![](results/razzo_project_20190906/figure_1b.png)
 
 ## Folder structure
 
