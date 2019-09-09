@@ -98,6 +98,9 @@ for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://rich
 
 ![](results/razzo_project_20190906/fig_marg_liks.png)
 
+#### 20190908
+
+![](results/razzo_project_20190908/fig_marg_liks.png)
 
 
 ## Folder structure
