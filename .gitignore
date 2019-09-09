@@ -37,3 +37,4 @@ rsconnect/
 data/
 *.posterior.log
 *.posterior.trees
+Rplots.pdf

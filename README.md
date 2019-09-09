@@ -9,6 +9,13 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ## Data
 
+To create the table below:
+
+```
+cd razzo_project
+./scripts/90_collect_run_times.sh
+```
+
 |date     | mean_runtime_hours| crown_age| n_candidates| mcmc_chain_length| n_replicates| mean_n_taxa| mean_ess|
 |:--------|------------------:|---------:|------------:|-----------------:|------------:|-----------:|--------:|
 |20190801 |          0.6439931|         6|            3|           1111000|            2|    26.81250| 552.0521|
@@ -19,8 +26,7 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 |20190904 |          0.6348322|         6|            4|           1000000|            2|    26.81250| 478.9740|
 |20190905 |          0.6264041|         6|            4|           1000000|           10|    28.33333| 502.4483|
 |20190906 |          0.3879977|         5|            4|           1000000|            2|    17.66667| 610.8542|
-
- * [ ] 20190908 is on richelbilderbeek.nl
+|20190908 |          0.6437963|         6|            4|           1000000|            2|    26.81250| 478.9740|
 
 To download the data, 
 download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
