@@ -20,6 +20,8 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 |20190905 |          0.6264041|         6|            4|           1000000|           10|    28.33333| 502.4483|
 |20190906 |          0.3879977|         5|            4|           1000000|            2|    17.66667| 610.8542|
 
+ * [ ] 20190908 is on richelbilderbeek.nl
+
 To download the data, 
 download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
 for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://richelbilderbeek.nl/razzo_project_20190801.zip)
