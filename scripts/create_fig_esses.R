@@ -1,12 +1,13 @@
+# Run from razzo_project folder, that is one folder above scripts
 
 # Input file
-# esses_filename <- file.path(getwd(), "results", "esses.csv")
-esses_filename <- "~/data/razzo_project_20190905/results/esses.csv"
+esses_filename <- file.path(getwd(), "results", "esses.csv")
+#esses_filename <- "~/data/razzo_project_20190905/results/esses.csv"
 testit::assert(file.exists(esses_filename))
 
 # Output file
-#fig_esses_filename <- file.path(getwd(), "results", "fig_esses.png")
-fig_esses_filename = "~/fig_esses.png"
+fig_esses_filename <- file.path(getwd(), "results", "fig_esses.png")
+# fig_esses_filename = "~/fig_esses.png"
 fig_esses_cumulative_filename = "~/fig_esses_cumulative.png"
 
 df <- read.csv(esses_filename)
