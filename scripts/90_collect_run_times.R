@@ -114,15 +114,16 @@ df_means
 df_means$crown_age <- NA
 df_means$n_candidates <- NA
 df_means$mcmc_chain_length <- NA
+df_means$n_particles <- NA
 df_means$n_replicates <- NA
 df_means$mean_n_taxa <- NA
 df_means$mean_ess <- NA
-
 
 for (i in seq_along(parameter_filenames)) {
   df_means$crown_age[i] <- readRDS(parameter_filenames[i])$mbd_params$crown_age
   df_means$n_candidates[i] <- length(readRDS(parameter_filenames[i])$pir_params$experiments)
   df_means$mcmc_chain_length[i] <- readRDS(parameter_filenames[i])$pir_params$experiments[[1]]$inference_model$mcmc$chain_length
+  df_means$n_particles[i] <- readRDS(parameter_filenames[i])$pir_params$experiments[[1]]$est_evidence_mcmc$particle_count
   n_replicates <- length(list.dirs(dirname(dirname(parameter_filenames[i]))[1])) - 1
   df_means$n_replicates[i] <- n_replicates
 
