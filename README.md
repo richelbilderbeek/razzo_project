@@ -28,6 +28,8 @@ cd razzo_project
 |20190906 |          0.3879977|         5|            4|           1000000|           1|            2|    17.66667| 610.8542|
 |20190908 |          0.6437963|         6|            4|           1000000|      ~~10~~|            2|    26.81250| 478.9740|
 
+ * `n_particles` was in practice always equal to 1, to and including 2019-09-10
+
 To download the data, 
 download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
 for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://richelbilderbeek.nl/razzo_project_20190801.zip)
