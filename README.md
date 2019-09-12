@@ -40,9 +40,13 @@ To download the data,
 download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
 for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://richelbilderbeek.nl/razzo_project_20190801.zip)
 
-![](fig_run_times.png)
-
 ## Results
+
+![](fig_run_times_boxplot.png)
+
+![](fig_mean_n_taxa.png)
+
+![](fig_mean_esses.png)
 
 ### Figure 1b.
 
