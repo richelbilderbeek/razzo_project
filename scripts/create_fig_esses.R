@@ -1,22 +1,17 @@
-# Run from razzo_project folder, that is one folder above scripts
 
 # Input file
 esses_filename <- file.path(getwd(), "results", "esses.csv")
-#esses_filename <- "~/data/razzo_project_20190905/results/esses.csv"
 testit::assert(file.exists(esses_filename))
 
 # Output file
 fig_esses_filename <- file.path(getwd(), "results", "fig_esses.png")
-# fig_esses_filename = "~/fig_esses.png"
-fig_esses_cumulative_filename = "~/fig_esses_cumulative.png"
+fig_esses_cumulative_filename <- file.path(getwd(), "results", "fig_cumulative_esses.png")
 
 df <- read.csv(esses_filename)
-df
 
 library(ggplot2)
 
 f_below <- sum(df$ess_likelihood < 200) / nrow(df)
-f_below
 
 library(plyr)
 
@@ -61,7 +56,6 @@ ggplot(df, aes(ess_likelihood)) +
 #                 ESS
 
 esses <- seq(1, max(df$ess_likelihood))
-esses
 
 # count ESSes
 esses_cnt <- rep(NA, length(esses))
@@ -70,7 +64,6 @@ for (i in seq_along(esses_cnt)) {
   count <- sum(df$ess_likelihood == value)
   esses_cnt[i] <- count
 }
-esses_cnt
 
 esses_sum_cnt <- esses_cnt
 for (i in seq_along(esses_sum_cnt)) {
@@ -79,7 +72,6 @@ for (i in seq_along(esses_sum_cnt)) {
   cur_value <- esses_sum_cnt[i]
   esses_sum_cnt[i] <- cur_value + prev_sum
 }
-esses_sum_cnt
 
 df_cumulative <- data.frame(value = esses, count = esses_cnt, cumulative = esses_sum_cnt)
 
