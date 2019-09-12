@@ -2,7 +2,7 @@
 #
 # Usage:
 #
-# ./90_collect_run_times
+# ./scripts/90_collect_run_times
 #
 
 
@@ -86,8 +86,6 @@ for (i in seq_along(run_times_filenames)) {
 
 df$date <- as.factor(df$date)
 
-names(df)
-
 library(ggplot2)
 library(plyr)
 
@@ -109,7 +107,6 @@ ggplot(
 
 # As table
 df_means <- ddply(na.omit(df), .(date), summarize, mean_runtime_hours = mean(n_hour))
-df_means
 
 df_means$crown_age <- NA
 df_means$n_candidates <- NA
@@ -147,6 +144,11 @@ for (i in seq_along(parameter_filenames)) {
     length(df_esses$ess_likelihood)
 }
 
-df_means
+# Correct for bug:
+# although the parameters said to use 10 particles,
+# in practice only one was used.
+# Bug is fixed since 2019-09-11
+df_means$n_particles[ which(df_means$date == "20190908") ] <- 1
+df_means$n_particles[ which(df_means$date == "20190910") ] <- 1
 
 knitr::kable(df_means)
