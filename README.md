@@ -42,11 +42,23 @@ for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://rich
 
 ## Results
 
-![](fig_run_times_boxplot.png)
+![](fig_esses.png)
+
+![](fig_f_mb_species.png)
+
+![](fig_mean_esses.png)
 
 ![](fig_mean_n_taxa.png)
 
-![](fig_mean_esses.png)
+![](fig_n_mb_species.png)
+
+![](fig_run_times_boxplot.png)
+
+![](fig_run_times_per_crown_age_grouped.png)
+
+![](fig_run_times_per_crown_age.png)
+
+![](fig_run_times.png)
 
 ### Figure 1b.
 

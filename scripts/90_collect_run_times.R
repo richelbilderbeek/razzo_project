@@ -156,4 +156,10 @@ for (i in seq_along(parameter_filenames)) {
 df_means$n_particles[ which(df_means$date == "20190908") ] <- 1
 df_means$n_particles[ which(df_means$date == "20190910") ] <- 1
 
-knitr::kable(df_means)
+knitr::kable(df_means, format = "markdown")
+
+cat(
+  knitr::kable(df_means, format = "markdown"),
+  sep = "\n",
+  file = "~/GitHubs/razzo_project/overview.md"
+)

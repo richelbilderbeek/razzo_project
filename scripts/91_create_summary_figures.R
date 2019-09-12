@@ -117,10 +117,11 @@ df_means$perc_low_ess <- NA
 df_means$dna_length <- NA
 
 for (i in seq_along(parameter_filenames)) {
-  df_means$crown_age[i] <- readRDS(parameter_filenames[i])$mbd_params$crown_age
-  df_means$n_candidates[i] <- length(readRDS(parameter_filenames[i])$pir_params$experiments)
-  df_means$mcmc_chain_length[i] <- readRDS(parameter_filenames[i])$pir_params$experiments[[1]]$inference_model$mcmc$chain_length
-  df_means$n_particles[i] <- readRDS(parameter_filenames[i])$pir_params$experiments[[1]]$est_evidence_mcmc$particle_count
+  razzo_params <- readRDS(parameter_filenames[i])
+  df_means$crown_age[i] <- razzo_params$mbd_params$crown_age
+  df_means$n_candidates[i] <- length(razzo_params$pir_params$experiments)
+  df_means$mcmc_chain_length[i] <- razzo_params$pir_params$experiments[[1]]$inference_model$mcmc$chain_length
+  df_means$n_particles[i] <- razzo_params$pir_params$experiments[[1]]$est_evidence_mcmc$particle_count
   n_replicates <- length(list.dirs(dirname(dirname(parameter_filenames[i]))[1])) - 1
   df_means$n_replicates[i] <- n_replicates
 
@@ -143,10 +144,7 @@ for (i in seq_along(parameter_filenames)) {
     length(df_esses$ess_likelihood)
 
   df_means$dna_length[i] <- nchar(readRDS(parameter_filenames[i])$pir_params$alignment_params$root_sequence)
-
 }
-
-
 # Correct for bug:
 # although the parameters said to use 10 particles,
 # in practice only one was used.
@@ -183,4 +181,3 @@ ggplot(
   ) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   ggsave("~/GitHubs/razzo_project/fig_mean_esses.png", width = 7, height = 7)
-
