@@ -116,6 +116,7 @@ df_means$n_replicates <- NA
 df_means$mean_n_taxa <- NA
 df_means$mean_ess <- NA
 df_means$perc_low_ess <- NA
+df_means$dna_length <- NA
 
 for (i in seq_along(parameter_filenames)) {
   df_means$crown_age[i] <- readRDS(parameter_filenames[i])$mbd_params$crown_age
@@ -142,7 +143,11 @@ for (i in seq_along(parameter_filenames)) {
   df_means$mean_ess[i] <- mean_ess
   df_means$perc_low_ess[i] <- 100.0 * sum(df_esses$ess_likelihood < 200) /
     length(df_esses$ess_likelihood)
+
+  df_means$dna_length[i] <- nchar(readRDS(parameter_filenames[i])$pir_params$alignment_params$root_sequence)
+
 }
+
 
 # Correct for bug:
 # although the parameters said to use 10 particles,
