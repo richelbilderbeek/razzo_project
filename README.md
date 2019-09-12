@@ -33,6 +33,7 @@ cd razzo_project
 |20190911 |          1.0103827|         7|            4|           1000000|           1|            2|    56.75000| 400.4140|     41.93548|       1000|
 |20190912 |         21.3550000|         6|            4|           1000000|          10|            2|    26.81250| 499.7165|     30.92784|       1000|
 
+ * `20190908` is the favorite starting point
  * The `n_particles` in `20190908` and `20190910` is correct to the actual value of 1, due to a `mcbette` error 
 
 To download the data, 
