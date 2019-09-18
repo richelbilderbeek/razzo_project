@@ -9,32 +9,18 @@ Branch|[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ## Data
 
-To create the table below:
+To create the table in [overview.md](overview.md):
 
 ```
 cd razzo_project
 ./scripts/90_collect_run_times.sh
 ```
 
-
-
-|date     | mean_runtime_hours| crown_age| n_candidates| mcmc_chain_length| n_particles| n_replicates| mean_n_taxa| mean_ess| perc_low_ess| dna_length|
-|:--------|------------------:|---------:|------------:|-----------------:|-----------:|------------:|-----------:|--------:|------------:|----------:|
-|20190801 |          0.6439931|         6|            3|           1111000|           1|            2|    26.81250| 552.0521|     27.08333|       1000|
-|20190808 |          0.6791088|         6|            3|           1111000|           1|            2|    26.81250| 541.2969|     31.25000|       1000|
-|20190815 |          1.6287905|         7|            3|           1111000|           1|            2|    56.75000| 463.0667|     36.66667|       1000|
-|20190829 |          3.3101975|         6|           40|           1000000|           1|            2|    26.81250| 421.7337|     39.13043|       1000|
-|20190903 |          4.1418981|         6|           40|           1000000|           1|            2|    26.81250| 429.4056|     37.77778|       1000|
-|20190904 |          0.6348322|         6|            4|           1000000|           1|            2|    26.81250| 478.9740|     31.25000|       1000|
-|20190905 |          0.6264041|         6|            4|           1000000|           1|           10|    28.33333| 502.4483|     28.90295|       1000|
-|20190906 |          0.3879977|         5|            4|           1000000|           1|            2|    17.66667| 610.8542|     19.27083|       1000|
-|20190908 |          0.6437963|         6|            4|           1000000|           1|            2|    26.81250| 478.9740|     31.25000|       1000|
-|20190910 |          0.1362500|         6|            4|           1000000|           1|            2|    26.81250| 583.5312|     16.66667|        100|
-|20190911 |          1.0103827|         7|            4|           1000000|           1|            2|    56.75000| 400.4140|     41.93548|       1000|
-|20190912 |         21.3550000|         6|            4|           1000000|          10|            2|    26.81250| 499.7165|     30.92784|       1000|
+See [overview.md](overview.md).
 
  * `20190908` is the favorite starting point
- * The `n_particles` in `20190908` and `20190910` is correct to the actual value of 1, due to a `mcbette` error 
+ * The `n_particles` in `20190908` and `20190910` 
+   is correct to the actual value of 1, due to a `mcbette` error 
 
 To download the data, 
 download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
