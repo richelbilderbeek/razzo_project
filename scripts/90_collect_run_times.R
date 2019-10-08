@@ -71,6 +71,7 @@ df <- data.frame()
 for (i in seq_along(run_times_filenames)) {
   run_times_filename <- run_times_filenames[i]
   cpu_times_str <- as.character(read.csv(run_times_filename)$cpu_time)
+  state_str <- as.character(read.csv(run_times_filename, na.strings = "")$state)
   cpu_times_n_secs <- time_strs_to_n_secs(cpu_times_str)
   cpu_times_n_secs
   run_date <- stringr::str_match(
@@ -78,8 +79,8 @@ for (i in seq_along(run_times_filenames)) {
     "razzo_project_(........)"
   )[1, 2]
   run_date
-
-  this_df <- data.frame(date = run_date,  n_sec = cpu_times_n_secs)
+  testit::assert(length(cpu_times_n_secs) == length(state_str))
+  this_df <- data.frame(date = run_date,  n_sec = cpu_times_n_secs, state = state_str)
   this_df$i <- seq(1, nrow(this_df))
   df <- rbind(df, this_df)
 }
@@ -103,6 +104,26 @@ ggplot(
   ) + labs(
     title = "Simulation run-times"
   ) + ggsave("~/fig_run_times.png", width = 7, height = 7)
+
+
+library(dplyr)
+names(df)
+df_state <- df %>%
+    group_by(date) %>%
+    dplyr::summarize(
+      f_ok = mean(state == "COMPLETED"),
+      f_fail = mean(state == "NA"),
+      f_cancel = mean(state == "CANCELLED")
+    )
+
+ggplot(df_state, aes(x = date, y = f_fail, fill = date)) +
+  geom_col() +
+  ggplot2::scale_y_continuous(limits = c(0.0, 0.10), oob = scales::squish) +
+  geom_hline(yintercept = 0.10, lty = "dashed") +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  ggsave("~/fig_states.png", width = 7, height = 7)
+
+
 
 
 # As table

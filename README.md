@@ -30,6 +30,8 @@ for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://rich
 
 ![](fig_esses.png)
 
+![](fig_states.png)
+
 ![](fig_f_mb_species.png)
 
 ![](fig_mean_esses.png)
