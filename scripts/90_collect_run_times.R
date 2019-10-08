@@ -128,6 +128,10 @@ ggplot(df_state, aes(x = date, y = f_fail, fill = date)) +
 
 # As table
 df_means <- ddply(na.omit(df), .(date), summarize, mean_runtime_hours = mean(n_hour))
+names(df_means)
+names(df_state)
+
+df_means <- merge(x = df_means, df_state)
 
 df_means$crown_age <- NA
 df_means$n_candidates <- NA
