@@ -118,6 +118,7 @@ df_means$mean_n_taxa <- NA
 df_means$mean_ess <- NA
 df_means$perc_low_ess <- NA
 df_means$dna_length <- NA
+df_means$nus <- NA
 
 
 for (i in seq_along(parameter_filenames)) {
@@ -128,6 +129,13 @@ for (i in seq_along(parameter_filenames)) {
   df_means$n_particles[i] <- readRDS(parameter_filenames[i])$pir_params$experiments[[1]]$est_evidence_mcmc$particle_count
   n_replicates <- length(list.dirs(dirname(dirname(parameter_filenames[i]))[1])) - 1
   df_means$n_replicates[i] <- n_replicates
+
+  # nus
+  mbd_params_filename <- file.path(dirname(dirname(dirname(dirname(parameter_filenames[i])))), "results", "mbd_params.csv")
+  testit::assert(file.exists(mbd_params_filename))
+  df_mbd_param <- read.csv(mbd_params_filename)
+  nus <- sort(unique(df_mbd_param$nu))
+  df_means$nus[i] <- paste(as.character(nus), collapse = ",")
 
   # Mean number of taxa
   n_taxa_filename <- file.path(dirname(dirname(dirname(dirname(parameter_filenames[i])))), "results", "n_taxa.csv")
