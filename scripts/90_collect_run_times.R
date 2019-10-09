@@ -199,3 +199,9 @@ cat(
   sep = "\n",
   file = "~/GitHubs/razzo_project/overview.md"
 )
+
+names(df_means)
+df_verdict <- data.frame(date = df_means$date)
+df_verdict$most_runs_pass <- df_means$f_fail < 0.05
+df_verdict$mean_ess_good <- df_means$mean_ess > 200
+df_verdict$most_ess_good <- df_means$perc_low_ess < 0.05
