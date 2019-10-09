@@ -209,7 +209,7 @@ df_verdict$most_ess_good <- df_means$perc_low_ess < 0.05
 knitr::kable(df_verdict, format = "markdown")
 
 cat(
-  knitr::kable(df_means, format = "markdown"),
+  knitr::kable(df_verdict, format = "markdown"),
   sep = "\n",
   file = "~/GitHubs/razzo_project/verdict.md"
 )
