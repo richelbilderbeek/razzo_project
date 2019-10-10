@@ -14,6 +14,6 @@ License: GPL-3 | file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    beastier (>= 2.0.18),
+    beastier (>= 2.0.25),
     peregrine (>= 0.4)
 Suggests:
