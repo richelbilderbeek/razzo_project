@@ -23,10 +23,10 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=70_do_analysis
 #SBATCH --output=70_do_analysis.log
-jobid=$(sbatch 6_create_mbd_file.sh | cut -d ' ' -f 4)
-jobid=$(sbatch --dependency=afterok:$jobid 7_create_nltt_stats_file.sh | cut -d ' ' -f 4)
-jobid=$(sbatch --dependency=afterok:$jobid 8_create_esses_files.sh | cut -d ' ' -f 4)
-jobid=$(sbatch --dependency=afterok:$jobid 9_create_marg_liks_file.sh | cut -d ' ' -f 4)
-jobid=$(sbatch --dependency=afterok:$jobid 10_create_n_mb_species_file.sh | cut -d ' ' -f 4)
-jobid=$(sbatch --dependency=afterok:$jobid 11_create_n_taxa_file.sh | cut -d ' ' -f 4)
-jobid=$(sbatch --dependency=afterok:$jobid 12_create_run_times_file.sh | cut -d ' ' -f 4)
+jobid=$(sbatch scripts/6_create_mbd_file.sh | cut -d ' ' -f 4)
+jobid=$(sbatch --dependency=afterok:$jobid scripts/7_create_nltt_stats_file.sh | cut -d ' ' -f 4)
+jobid=$(sbatch --dependency=afterok:$jobid scripts/8_create_esses_files.sh | cut -d ' ' -f 4)
+jobid=$(sbatch --dependency=afterok:$jobid scripts/9_create_marg_liks_file.sh | cut -d ' ' -f 4)
+jobid=$(sbatch --dependency=afterok:$jobid scripts/10_create_n_mb_species_file.sh | cut -d ' ' -f 4)
+jobid=$(sbatch --dependency=afterok:$jobid scripts/11_create_n_taxa_file.sh | cut -d ' ' -f 4)
+jobid=$(sbatch --dependency=afterok:$jobid scripts/12_create_run_times_file.sh | cut -d ' ' -f 4)
