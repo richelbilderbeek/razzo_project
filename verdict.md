@@ -14,3 +14,10 @@
 |20190923 |TRUE           |TRUE          |FALSE         |
 |20191006 |TRUE           |TRUE          |FALSE         |
 |20191007 |TRUE           |TRUE          |FALSE         |
+|20191008 |FALSE          |TRUE          |FALSE         |
+|20191009 |FALSE          |TRUE          |FALSE         |
+|20191010 |FALSE          |TRUE          |FALSE         |
+|20191011 |FALSE          |TRUE          |FALSE         |
+|20191012 |FALSE          |TRUE          |FALSE         |
+|20191013 |FALSE          |TRUE          |FALSE         |
+|20191014 |FALSE          |TRUE          |FALSE         |
