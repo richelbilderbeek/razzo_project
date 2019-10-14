@@ -58,13 +58,21 @@ parameter_filenames <- as.character(
 )
 parameter_filenames
 
-run_times_filenames <- list.files(
+# Dirty filenames, e.g. with
+# /data/razzo_project_20191017/results/razzo_project_20191014/run_times.csv
+run_times_filenames_dirty <- list.files(
   path = "~/data",
   pattern = "run_times.csv",
   full.names = TRUE,
   recursive = TRUE
 )
-run_times_filenames
+run_times_filenames_dirty
+run_times_filenames <- stringr::str_match(
+  string = run_times_filenames_dirty,
+  pattern = ".*results/run_times.csv"
+)
+run_times_filenames <- as.character(na.omit(run_times_filenames[, 1]))
+
 
 df <- data.frame()
 
@@ -105,6 +113,8 @@ ggplot(
     title = "Simulation run-times"
   ) + ggsave("~/GitHubs/razzo_project/fig_run_times.png", width = 7, height = 7)
 
+sum(df[df$date == "20191010", ]$state == "COMPLETED")
+sum(df[df$date == "20191010", ]$state != "COMPLETED")
 
 library(dplyr)
 names(df)
@@ -169,6 +179,9 @@ for (i in seq_along(parameter_filenames)) {
 
   # Mean number of taxa
   n_taxa_filename <- file.path(dirname(dirname(dirname(dirname(parameter_filenames[i])))), "results", "n_taxa.csv")
+  if (!file.exists(n_taxa_filename)) {
+    print(n_taxa_filename)
+  }
   testit::assert(file.exists(n_taxa_filename))
   df_n_taxa <- read.csv(n_taxa_filename)
   mean_n_taxa <- mean(df_n_taxa$n_taxa)
@@ -176,7 +189,9 @@ for (i in seq_along(parameter_filenames)) {
 
   # Mean ESS
   esses_filename <- file.path(dirname(dirname(dirname(dirname(parameter_filenames[i])))), "results", "esses.csv")
-  #if (!file.exists(esses_filename)) next
+  if (!file.exists(esses_filename)) {
+    print(esses_filename)
+  }
   testit::assert(file.exists(esses_filename))
   df_esses <- read.csv(esses_filename)
   mean_ess <- mean(df_esses$ess_likelihood)
@@ -185,7 +200,10 @@ for (i in seq_along(parameter_filenames)) {
   df_means$perc_low_ess[i] <- 100.0 * sum(df_esses$ess_likelihood < 200) /
     length(df_esses$ess_likelihood)
 
-  df_means$dna_length[i] <- nchar(readRDS(parameter_filenames[i])$pir_params$alignment_params$root_sequence)
+  testit::assert(file.exists(parameter_filenames[i]))
+  df_means$dna_length[i] <- nchar(
+    readRDS(parameter_filenames[i])$pir_params$alignment_params$root_sequence
+  )
 
 }
 
@@ -208,7 +226,6 @@ cat(
 names(df_means)
 df_verdict <- data.frame(date = df_means$date)
 df_verdict$most_runs_pass <- df_means$f_fail < 0.05
-df_verdict$mean_ess_good <- df_means$mean_ess > 200
 df_verdict$most_ess_good <- df_means$perc_low_ess < 0.05
 
 knitr::kable(df_verdict, format = "markdown")

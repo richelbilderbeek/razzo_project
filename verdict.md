@@ -1,23 +1,25 @@
-|date     |most_runs_pass |mean_ess_good |most_ess_good |
-|:--------|:--------------|:-------------|:-------------|
-|20190808 |TRUE           |TRUE          |FALSE         |
-|20190815 |TRUE           |TRUE          |FALSE         |
-|20190829 |FALSE          |TRUE          |FALSE         |
-|20190903 |TRUE           |TRUE          |FALSE         |
-|20190904 |TRUE           |TRUE          |FALSE         |
-|20190905 |TRUE           |TRUE          |FALSE         |
-|20190906 |TRUE           |TRUE          |FALSE         |
-|20190908 |TRUE           |TRUE          |FALSE         |
-|20190910 |TRUE           |TRUE          |FALSE         |
-|20190915 |FALSE          |TRUE          |FALSE         |
-|20190918 |TRUE           |TRUE          |FALSE         |
-|20190923 |TRUE           |TRUE          |FALSE         |
-|20191006 |TRUE           |TRUE          |FALSE         |
-|20191007 |TRUE           |TRUE          |FALSE         |
-|20191008 |FALSE          |TRUE          |FALSE         |
-|20191009 |FALSE          |TRUE          |FALSE         |
-|20191010 |FALSE          |TRUE          |FALSE         |
-|20191011 |FALSE          |TRUE          |FALSE         |
-|20191012 |FALSE          |TRUE          |FALSE         |
-|20191013 |FALSE          |TRUE          |FALSE         |
-|20191014 |FALSE          |TRUE          |FALSE         |
+|date     |most_runs_pass |most_ess_good |
+|:--------|:--------------|:-------------|
+|20190808 |TRUE           |FALSE         |
+|20190815 |TRUE           |FALSE         |
+|20190829 |FALSE          |FALSE         |
+|20190903 |TRUE           |FALSE         |
+|20190904 |TRUE           |FALSE         |
+|20190905 |TRUE           |FALSE         |
+|20190906 |TRUE           |FALSE         |
+|20190908 |TRUE           |FALSE         |
+|20190910 |TRUE           |FALSE         |
+|20190915 |FALSE          |FALSE         |
+|20190918 |TRUE           |FALSE         |
+|20190923 |TRUE           |FALSE         |
+|20191006 |TRUE           |FALSE         |
+|20191007 |TRUE           |FALSE         |
+|20191008 |TRUE           |FALSE         |
+|20191009 |TRUE           |FALSE         |
+|20191010 |TRUE           |FALSE         |
+|20191011 |TRUE           |FALSE         |
+|20191012 |TRUE           |FALSE         |
+|20191013 |TRUE           |FALSE         |
+|20191014 |TRUE           |FALSE         |
+|20191016 |TRUE           |FALSE         |
+|20191017 |TRUE           |FALSE         |
