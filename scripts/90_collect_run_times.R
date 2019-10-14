@@ -103,7 +103,7 @@ ggplot(
     aes(xintercept = mean, col = date)
   ) + labs(
     title = "Simulation run-times"
-  ) + ggsave("~/fig_run_times.png", width = 7, height = 7)
+  ) + ggsave("~/GitHubs/razzo_project/fig_run_times.png", width = 7, height = 7)
 
 
 library(dplyr)
@@ -116,12 +116,17 @@ df_state <- df %>%
       f_cancel = mean(state == "CANCELLED")
     )
 
-ggplot(df_state, aes(x = date, y = f_fail, fill = date)) +
+unique(df$state)
+
+ggplot(df_state, aes(x = date, y = f_ok, fill = date)) +
   geom_col() +
-  ggplot2::scale_y_continuous(limits = c(0.0, 0.10), oob = scales::squish) +
-  geom_hline(yintercept = 0.10, lty = "dashed") +
+  ggplot2::scale_y_continuous(limits = c(0.0, 1.00), oob = scales::squish) +
+  geom_hline(yintercept = 0.95, lty = "dashed") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/fig_states.png", width = 7, height = 7)
+  labs(
+    title = "Runs that finish with OK"
+  ) +
+  ggsave("~/GitHubs/razzo_project/fig_states.png", width = 7, height = 7)
 
 
 
