@@ -222,7 +222,10 @@ cat(
   sep = "\n",
   file = "~/GitHubs/razzo_project/overview.md"
 )
-
+utils::write.csv(
+  df_means,
+  file = "~/GitHubs/razzo_project/overview.csv"
+)
 names(df_means)
 df_verdict <- data.frame(date = df_means$date)
 df_verdict$most_runs_pass <- df_means$f_fail < 0.05
@@ -234,4 +237,8 @@ cat(
   knitr::kable(df_verdict, format = "markdown"),
   sep = "\n",
   file = "~/GitHubs/razzo_project/verdict.md"
+)
+utils::write.csv(
+  x = df_verdict,
+  file = "~/GitHubs/razzo_project/verdict.csv"
 )
