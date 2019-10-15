@@ -7,6 +7,10 @@
 #
 library(testthat)
 
+################################################################################
+# Create a data frame that maps the log to the parameter file
+################################################################################
+
 # Has both razzo and raket filenames
 all_log_filenames <- list.files(
   path = "~/data",
@@ -58,4 +62,64 @@ for (i in seq(1, nrow(df_log_to_param_file))) {
 }
 head(df_log_to_param_file)
 
+################################################################################
+# Add status column
+################################################################################
+extract_status <- function(log_filename) {
+  testit::assert(file.exists(log_filename))
+  text <- readLines(log_filename)
+  status <- as.character(
+    na.omit(
+      stringr::str_match(
+        string = text,
+        pattern = ".*State.*: (.*)"
+      )[, 2]
+    )
+  )
+  status
+}
+
+for (i in seq(1, nrow(df_log_to_param_file))) {
+  df_log_to_param_file$status[i] <- extract_status(
+    df_log_to_param_file$log_filename[i]
+  )
+}
+head(df_log_to_param_file)
+
+################################################################################
+# Add ESS
+################################################################################
+extract_gen_model_ess <- function(param_filename) {
+  testit::assert(file.exists(param_filename))
+  marg_lik_filename <- file.path(dirname(param_filename), "mbd_marg_lik.csv")
+  if (!file.exists(marg_lik_filename)) {
+    return(NA)
+  }
+  testit::assert(file.exists(marg_lik_filename))
+  marg_liks <- read.csv(marg_lik_filename)
+  ess <- NA
+  if ("ess" %in% names(marg_liks)) {
+    gen_model_index <- which(marg_liks$site_model_name == "JC69" &
+      marg_liks$clock_model_name == "strict" &
+      marg_liks$tree_prior_name == "birth_death")
+    ess <- marg_liks$ess[gen_model_index]
+  }
+  ess
+}
+
+for (i in seq(1, nrow(df_log_to_param_file))) {
+  df_log_to_param_file$gen_model_ess[i] <- extract_gen_model_ess(
+    df_log_to_param_file$param_filename[i]
+  )
+}
+head(df_log_to_param_file)
+tail(df_log_to_param_file)
+
+################################################################################
+# Add MBD params
+################################################################################
+extract_ess <- function(param_filename) {
+  testit::assert(file.exists(param_filename))
+
+}
 
