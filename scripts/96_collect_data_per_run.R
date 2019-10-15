@@ -116,10 +116,22 @@ head(df_log_to_param_file)
 tail(df_log_to_param_file)
 
 ################################################################################
-# Add MBD params
+# Add other params
 ################################################################################
-extract_ess <- function(param_filename) {
-  testit::assert(file.exists(param_filename))
+for (i in seq(1, nrow(df_log_to_param_file))) {
+  param_filename <- df_log_to_param_file$param_filename[i]
+  parameters <- readRDS(param_filename)
 
+  df_log_to_param_file$lambda[i] <- parameters$mbd_params$lambda
+  df_log_to_param_file$mu[i] <- parameters$mbd_params$mu
+  df_log_to_param_file$nu[i] <- parameters$mbd_params$nu
+  df_log_to_param_file$q[i] <- parameters$mbd_params$q
+  df_log_to_param_file$crown_age[i] <- parameters$pir_params$experiments[[1]]$inference_model$mrca_prior$mrca_distr$mean$value
 }
 
+head(df_log_to_param_file)
+tail(df_log_to_param_file)
+write.csv(
+  x = df_log_to_param_file,
+  "~/GitHubs/razzo_project/detailed_overview.csv"
+)
