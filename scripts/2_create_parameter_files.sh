@@ -35,7 +35,7 @@ module load R
 
 experiment_type=$1
 if [ "$#" -ne 1 ]; then
-  experiment_type=test
+  experiment_type=full
 fi
 
 echo "Experiment type: "$experiment_type
