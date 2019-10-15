@@ -29,6 +29,10 @@ for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://rich
 
 Our verdicts if a setting is good enough: see [verdict.md](verdict.md).
 
+Note:
+
+ * Bug #350 had its unfluence up until #346. #347 is without that bug
+
 ## Results
 
 ![](fig_esses.png)
