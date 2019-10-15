@@ -19,6 +19,7 @@ r_github_packages:
   - ropensci/mauricer
   - ropensci/babette
   - richelbilderbeek/mcbette
+  - thijsjanzen/nodeSub
   - richelbilderbeek/pirouette@develop
   - richelbilderbeek/peregrine
   - richelbilderbeek/razzo@richel
