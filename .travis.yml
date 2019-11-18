@@ -20,7 +20,7 @@ r_github_packages:
   - ropensci/babette
   - richelbilderbeek/mcbette
   - thijsjanzen/nodeSub
-  - richelbilderbeek/pirouette@develop
+  - richelbilderbeek/pirouette
   - richelbilderbeek/peregrine
   - richelbilderbeek/razzo@richel
   - MangoTheCat/goodpractice
