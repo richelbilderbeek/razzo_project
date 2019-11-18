@@ -38,3 +38,5 @@ data/
 *.posterior.log
 *.posterior.trees
 Rplots.pdf
+*.log
+*.trees
