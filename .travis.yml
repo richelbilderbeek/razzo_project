@@ -28,8 +28,6 @@ r_github_packages:
 
 before_install:
   - echo $TRAVIS_R_VERSION_STRING
-  # Check if the needed permissions are present
-  - Rscript -e 'dir.create("/tmp/1234567890/beast2_tmp_folder_1234567890", recursive = TRUE)'
   # ImageMagick
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo add-apt-repository -y ppa:opencpu/imagemagick; fi
   - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sudo apt-get update; fi
@@ -41,6 +39,8 @@ before_install:
   - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then R --quiet -e 'install.packages("rJava", type="source", repos="http://cran.us.r-project.org")'; fi
 
 script:
+  - rm -rf data
+  - rm -rf results
   - ./scripts/regen_data.sh
 
 after_success:
