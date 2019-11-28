@@ -10,6 +10,7 @@
 #   sbatch ./scripts/10_create_n_mb_species_file
 #
 # Peregrine directives:
+#SBATCH --partition=vulture
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1

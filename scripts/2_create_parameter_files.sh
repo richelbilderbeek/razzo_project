@@ -24,6 +24,7 @@
 #  sbatch ./scripts/2_create_parameter_files full
 #
 # Peregrine directives:
+#SBATCH --partition=vulture
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
