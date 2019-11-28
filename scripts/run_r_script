@@ -5,7 +5,7 @@
 #
 # sbatch run_r_script create_example_1.R
 #
-#SBATCH --partition=regular
+#SBATCH --partition=gelifes
 #SBATCH --time=240:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
