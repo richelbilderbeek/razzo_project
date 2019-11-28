@@ -25,7 +25,7 @@
 #  sbatch ./scripts/regen_data full
 #
 # Peregrine directives:
-#SBATCH --partition=regular
+#SBATCH --partition=gelifes
 #SBATCH --time=10:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1

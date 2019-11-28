@@ -10,7 +10,7 @@
 #   sbatch ./scripts/11_create_n_taxa_file
 #
 # Peregrine directives:
-#SBATCH --partition=vulture
+#SBATCH --partition=gelifes
 #SBATCH --time=1:00:00
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
