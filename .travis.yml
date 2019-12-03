@@ -11,7 +11,6 @@ r_packages:
 r_github_packages:
   - jimhester/covr
   - jimhester/lintr
-  - KlausVigo/phangorn
   - Giappo/mbd
   - ropensci/babette
   - richelbilderbeek/mcbette
