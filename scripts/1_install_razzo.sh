@@ -22,7 +22,7 @@
 module load R
 Rscript -e 'devtools::install_github("richelbilderbeek/nLTT")'
 Rscript -e 'devtools::install_github("ropensci/beautier")'
-Rscript -e 'devtools::install_github("ropensci/tracerer")'
+Rscript -e 'devtools::install_github("ropensci/tracerer", ref = "develop")'
 Rscript -e 'devtools::install_github("ropensci/beastier")'
 Rscript -e 'devtools::install_github("ropensci/mauricer")'
 Rscript -e 'devtools::install_github("ropensci/babette", ref = "develop")'
