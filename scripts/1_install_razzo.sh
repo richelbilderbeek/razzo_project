@@ -21,9 +21,9 @@
 #SBATCH --output=1_install_razzo.log
 module load R
 
-source("http://bioconductor.org/biocLite.R")
-biocLite()
-BiocManager::install(c("multtest"))
+Rscript -e 'source("http://bioconductor.org/biocLite.R")'
+Rscript -e 'biocLite()'
+Rscript -e 'BiocManager::install(c("multtest"))'
 
 Rscript -e 'devtools::update_packages()'
 Rscript -e 'devtools::install_github("richelbilderbeek/nLTT")'
