@@ -25,7 +25,6 @@ Rscript -e 'source("http://bioconductor.org/biocLite.R")'
 Rscript -e 'biocLite()'
 Rscript -e 'BiocManager::install(c("multtest"))'
 
-Rscript -e 'devtools::update_packages()'
 Rscript -e 'devtools::install_github("richelbilderbeek/nLTT")'
 Rscript -e 'devtools::install_github("ropensci/beautier")'
 Rscript -e 'devtools::install_github("ropensci/tracerer", ref = "develop")'
@@ -44,4 +43,6 @@ Rscript -e 'if (mauricer::is_beast2_pkg_installed("NS")) mauricer::uninstall_bea
 Rscript -e 'if (beastier::is_beast2_installed()) beastier::uninstall_beast2()'
 Rscript -e 'if (!beastier::is_beast2_installed()) beastier::install_beast2()'
 Rscript -e 'if (!mauricer::is_beast2_pkg_installed("NS")) mauricer::install_beast2_pkg("NS")'
+
+Rscript -e 'devtools::update_packages()'
 
