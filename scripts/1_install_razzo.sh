@@ -20,14 +20,7 @@
 #SBATCH --job-name=1_install_razzo
 #SBATCH --output=1_install_razzo.log
 module load R
-
-# From https://www.r-bloggers.com/update-all-user-installed-r-packages-again/
-install.packages( 
-  lib  = lib <- .libPaths()[1],
-  pkgs = as.data.frame(installed.packages(lib), stringsAsFactors=FALSE)$Package,
-  type = 'source'
-)
-
+Rscript -e 'devtools::update_packages()'
 Rscript -e 'devtools::install_github("richelbilderbeek/nLTT")'
 Rscript -e 'devtools::install_github("ropensci/beautier")'
 Rscript -e 'devtools::install_github("ropensci/tracerer", ref = "develop")'
