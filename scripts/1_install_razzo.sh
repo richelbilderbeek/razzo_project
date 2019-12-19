@@ -19,7 +19,7 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=1_install_razzo
 #SBATCH --output=1_install_razzo.log
-module load R
+module load R HDF5
 
 Rscript -e 'install.packages("BiocManager")'
 Rscript -e 'BiocManager::install(version = "3.10")'
