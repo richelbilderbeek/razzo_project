@@ -24,6 +24,8 @@ module load HDF5/1.10.1-foss-2018a
 module add HDF5/1.10.1-foss-2018a
 module list
 
+Rscript -e 'devtools::update_packages()'
+
 Rscript -e 'install.packages("BiocManager", repos="http://cran.r-project.org")'
 Rscript -e 'BiocManager::install(version = "3.10")'
 Rscript -e 'BiocManager::install()'
@@ -46,5 +48,4 @@ Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "richel")'
 Rscript -e 'if (!beastier::is_beast2_installed()) beastier::install_beast2()'
 Rscript -e 'if (!mauricer::is_beast2_pkg_installed("NS")) mauricer::install_beast2_pkg("NS")'
 
-Rscript -e 'devtools::update_packages()'
 
