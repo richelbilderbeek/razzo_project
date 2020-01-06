@@ -10,16 +10,19 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ## Versions
 
+ * [nLTT v1.4.3](https://github.com/richelbilderbeek/nLTT/releases/tag/v1.4.3)
  * [beautier v2.3.3](https://github.com/ropensci/beautier/releases/tag/v2.3.3)
  * [tracerer v2.0.3](https://github.com/ropensci/tracerer/releases/tag/v2.0.3)
  * [beastier v2.1.2](https://github.com/ropensci/beastier/releases/tag/v2.1.2)
  * [mauricer v2.0.6](https://github.com/ropensci/mauricer/releases/tag/v2.0.6)
  * [babette v2.1.1](https://github.com/ropensci/babette/releases/tag/v2.1.1)
  * [mcbette v1.8](https://github.com/richelbilderbeek/mcbette/releases/tag/v1.8)
- * [peregrine v1.0](https://github.com/richelbilderbeek/peregrine/releases/tag/v1.0)
+ * [pirouette v1.6.2](https://github.com/richelbilderbeek/pirouette/releases/tag/v1.6.2)
+ * [nodeSub v0.4.2](https://github.com/thijsjanzen/nodeSub/releases/tag/v0.4.2)
  * [mbd v1.0](https://github.com/Giappo/mbd/releases/tag/v1.0)
  * [mbd.SimTrees v0.1](https://github.com/Giappo/mbd.SimTrees/releases/tag/v0.1)
- * [nodeSub v0.4.2](https://github.com/thijsjanzen/nodeSub/releases/tag/v0.4.2)
+ * [becosys v1.0.1](https://github.com/richelbilderbeek/becosys/releases/tag/v1.0.1)
+ * [peregrine v1.0](https://github.com/richelbilderbeek/peregrine/releases/tag/v1.0)
  * [razzo v0.7.2](https://github.com/richelbilderbeek/razzo/releases/tag/v0.7.2)
 
 Code can be found in the `packages` folder.
