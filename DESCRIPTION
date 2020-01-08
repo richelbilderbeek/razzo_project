@@ -10,7 +10,7 @@ Maintainer: Richel J.C. Bilderbeek <richel@richelbilderbeek.nl>
 Description: The scripts for the razzo project.
   The main repo for the code is razzo.
   The main repo for the scripts is razzo_project.
-License: GPL-3 | file LICENSE
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports: 
