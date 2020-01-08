@@ -10,7 +10,7 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 ## Versions
 
- * [nLTT v1.4.3](https://github.com/richelbilderbeek/nLTT/releases/tag/v1.4.3)
+ * [nLTT v1.4.3](https://github.com/thijsjanzen/nLTT/releases/tag/v1.4.3)
  * [beautier v2.3.3](https://github.com/ropensci/beautier/releases/tag/v2.3.3)
  * [tracerer v2.0.3](https://github.com/ropensci/tracerer/releases/tag/v2.0.3)
  * [beastier v2.1.2](https://github.com/ropensci/beastier/releases/tag/v2.1.2)

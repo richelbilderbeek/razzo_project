@@ -31,7 +31,7 @@ Rscript -e 'BiocManager::install(version = "3.10")'
 Rscript -e 'BiocManager::install()'
 Rscript -e 'BiocManager::install(c("multtest"))'
 
-Rscript -e 'devtools::install_github("richelbilderbeek/nLTT", ref = "v1.4.3")'
+Rscript -e 'devtools::install_github("thijsjanzen/nLTT", ref = "v1.4.3")'
 Rscript -e 'devtools::install_github("ropensci/beautier", ref = "v2.3.3")'
 Rscript -e 'devtools::install_github("ropensci/tracerer", ref = "v2.0.3")'
 Rscript -e 'devtools::install_github("ropensci/beastier", ref = "v2.1.2")'
