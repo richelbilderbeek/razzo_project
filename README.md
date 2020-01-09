@@ -8,6 +8,13 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 
 `razzo` experiment scripts and storage.
 
+The research project uses these GitHub repo's:
+
+ * [razzo](https://github.com/richelbilderbeek/razzo): R code
+ * [razzo_project](https://github.com/richelbilderbeek/razzo_project): bash scripts to run and analyse an experiment
+ * [razzo_article (private)](https://github.com/richelbilderbeek/razzo_article): scientific manuscript (private GitHub for now)
+ * [razzo_pilot_results (private)](https://github.com/richelbilderbeek/razzo_pilot_results)
+
 ## Versions
 
  * [nLTT v1.4.3](https://github.com/thijsjanzen/nLTT/releases/tag/v1.4.3)
