@@ -11,9 +11,10 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 The research project uses these GitHub repo's:
 
  * [razzo](https://github.com/richelbilderbeek/razzo): R code
+ * [razzotestresults](https://github.com/richelbilderbeek/razzotestresults): `razzo` results of a test run
  * [razzo_project](https://github.com/richelbilderbeek/razzo_project): bash scripts to run and analyse an experiment
  * [razzo_article (private)](https://github.com/richelbilderbeek/razzo_article): scientific manuscript (private GitHub for now)
- * [razzo_pilot_results (private)](https://github.com/richelbilderbeek/razzo_pilot_results)
+ * [razzo_pilot_results (private)](https://github.com/richelbilderbeek/razzo_pilot_results): results of the pilot runs
 
 ## Versions
 
