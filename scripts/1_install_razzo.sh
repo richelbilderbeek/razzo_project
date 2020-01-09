@@ -44,7 +44,8 @@ Rscript -e 'devtools::install_github("Giappo/mbd", ref = "v1.0", dependencies = 
 Rscript -e 'devtools::install_github("Giappo/mbd.SimTrees", ref = "v0.1", dependencies = TRUE)'
 Rscript -e 'devtools::install_github("richelbilderbeek/becosys", ref = "v1.0.1", dependencies = TRUE)'
 Rscript -e 'devtools::install_github("richelbilderbeek/peregrine", ref = "v1.0", dependencies = TRUE)'
-Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "v0.7.2", dependencies = TRUE)'
+Rscript -e 'devtools::install_github("richelbilderbeek/raztr", ref = "v1.0", dependencies = TRUE)'
+Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "v0.8", dependencies = TRUE)'
 Rscript -e 'if (!beastier::is_beast2_installed()) beastier::install_beast2()'
 Rscript -e 'if (!mauricer::is_beast2_pkg_installed("NS")) mauricer::install_beast2_pkg("NS", dependencies = TRUE)'
 
