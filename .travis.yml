@@ -7,13 +7,6 @@ r_github_packages:
   - jimhester/lintr
   - MangoTheCat/goodpractice
   - ropensci/spelling
-  #- Giappo/mbd
-  #- ropensci/babette
-  #- richelbilderbeek/mcbette
-  #- thijsjanzen/nodeSub
-  #- richelbilderbeek/pirouette
-  #- richelbilderbeek/peregrine
-  #- richelbilderbeek/razzo
 
 before_install:
   - echo $TRAVIS_R_VERSION_STRING
