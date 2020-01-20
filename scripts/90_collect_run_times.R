@@ -186,7 +186,10 @@ for (i in seq_along(parameter_filenames)) {
   df_means$mean_n_taxa[i] <- mean_n_taxa
 
   # Mean ESS
-  esses_filename <- file.path(dirname(dirname(dirname(dirname(parameter_filenames[i])))), "results", "esses.csv")
+  esses_filename <- file.path(
+    dirname(dirname(dirname(dirname(parameter_filenames[i])))),
+    "results", "esses.csv"
+  )
   if (!file.exists(esses_filename)) {
     print(esses_filename)
   }
