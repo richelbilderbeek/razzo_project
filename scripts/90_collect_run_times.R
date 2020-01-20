@@ -111,7 +111,7 @@ ggplot(
     aes(xintercept = mean, col = date)
   ) + labs(
     title = "Simulation run-times"
-  ) + ggsave("~/GitHubs/razzo_results/fig_run_times.png", width = 7, height = 7)
+  ) + ggsave("~/GitHubs/razzo_pilot_results/fig_run_times.png", width = 7, height = 7)
 
 
 library(dplyr)
@@ -134,7 +134,7 @@ ggplot(df_state, aes(x = date, y = f_ok, fill = date)) +
   labs(
     title = "Runs that finish with OK"
   ) +
-  ggsave("~/GitHubs/razzo_results/fig_states.png", width = 7, height = 7)
+  ggsave("~/GitHubs/razzo_pilot_results/fig_states.png", width = 7, height = 7)
 
 
 
@@ -218,11 +218,11 @@ knitr::kable(df_means, format = "markdown")
 cat(
   knitr::kable(df_means, format = "markdown"),
   sep = "\n",
-  file = "~/GitHubs/razzo_results/overview.md"
+  file = "~/GitHubs/razzo_pilot_results/overview.md"
 )
 utils::write.csv(
   df_means,
-  file = "~/GitHubs/razzo_results/overview.csv"
+  file = "~/GitHubs/razzo_pilot_results/overview.csv"
 )
 names(df_means)
 df_verdict <- data.frame(date = df_means$date)
@@ -234,10 +234,10 @@ knitr::kable(df_verdict, format = "markdown")
 cat(
   knitr::kable(df_verdict, format = "markdown"),
   sep = "\n",
-  file = "~/GitHubs/razzo_results/verdict.md"
+  file = "~/GitHubs/razzo_pilot_results/verdict.md"
 )
 utils::write.csv(
   x = df_verdict,
-  file = "~/GitHubs/razzo_results/verdict.csv"
+  file = "~/GitHubs/razzo_pilot_results/verdict.csv"
 )
 
