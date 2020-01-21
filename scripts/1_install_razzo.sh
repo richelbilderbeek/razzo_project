@@ -24,6 +24,8 @@ module load HDF5/1.10.1-foss-2018a
 module add HDF5/1.10.1-foss-2018a
 module list
 
+Rscript -e 'install.packages("devtools")'
+
 Rscript -e 'devtools::update_packages()'
 
 Rscript -e 'install.packages("BiocManager", repos="http://cran.r-project.org", dependencies = TRUE)'
