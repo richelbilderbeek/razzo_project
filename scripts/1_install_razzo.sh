@@ -44,6 +44,6 @@ Rscript -e 'devtools::install_github("richelbilderbeek/becosys", ref = "v1.0.1",
 Rscript -e 'devtools::install_github("richelbilderbeek/raztr", ref = "v1.0", dependencies = TRUE)'
 Rscript -e 'devtools::install_github("richelbilderbeek/razzo", ref = "richel", dependencies = TRUE)'
 Rscript -e 'if (!beastier::is_beast2_installed()) beastier::install_beast2()'
-Rscript -e 'if (!mauricer::is_beast2_pkg_installed("NS")) mauricer::install_beast2_pkg("NS", dependencies = TRUE)'
+Rscript -e 'if (!mauricer::is_beast2_pkg_installed("NS")) mauricer::install_beast2_pkg("NS")'
 
 
