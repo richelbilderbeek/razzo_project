@@ -26,7 +26,7 @@ module list
 
 Rscript -e 'install.packages("devtools")'
 
-Rscript -e 'devtools::update_packages()'
+Rscript -e 'devtools::update_packages(repos = "http://cran.r-project.org", ask = FALSE)'
 
 Rscript -e 'install.packages("BiocManager", repos="http://cran.r-project.org", dependencies = TRUE)'
 Rscript -e 'BiocManager::install(version = "3.10", dependencies = TRUE)'
