@@ -24,14 +24,21 @@ module load HDF5/1.10.1-foss-2018a
 module add HDF5/1.10.1-foss-2018a
 module list
 
-Rscript -e 'install.packages("devtools", repos = "http://cran.r-project.org")'
+# On Peregrine:
+# 
+# > .libPaths()
+# [1] "/home/p230198/R/x86_64-pc-linux-gnu-library/3.6"          
+# [2] "/apps/haswell/software/R/3.6.1-foss-2018a/lib64/R/library"
 
-Rscript -e 'devtools::update_packages(repos = "http://cran.r-project.org", ask = FALSE)'
+Rscript -e 'install.packages("devtools", repos = "http://cran.r-project.org")'
+# Explicit default for 'lib': Rscript -e 'install.packages("devtools", repos = "http://cran.r-project.org", lib = .libPaths()[1])'
+
+Rscript -e 'devtools::update_packages(repos = "http://cran.r-project.org")'
 
 Rscript -e 'install.packages("BiocManager", repos="http://cran.r-project.org", dependencies = TRUE)'
-Rscript -e 'BiocManager::install(version = "3.10", dependencies = TRUE)'
-Rscript -e 'BiocManager::install()'
-Rscript -e 'BiocManager::install(c("multtest"))'
+#Rscript -e 'BiocManager::install(version = "3.10", dependencies = TRUE)'
+#Rscript -e 'BiocManager::install()'
+Rscript -e 'BiocManager::install(c("multtest"), dependencies = TRUE)'
 
 Rscript -e 'devtools::install_github("thijsjanzen/nLTT", ref = "v1.4.3", dependencies = TRUE)'
 Rscript -e 'devtools::install_github("richelbilderbeek/mcbette", ref = "v1.8", dependencies = TRUE)'
