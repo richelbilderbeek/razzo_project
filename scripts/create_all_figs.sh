@@ -20,13 +20,16 @@ cd $data_folder
 
 sub_folders=$(find . | egrep "/razzo_project/razzo_project_........$")
 
+script_indices="$(seq 6 19) $(seq 80 89)"
+
 for sub_folder in $sub_folders
-do 
+do
   cd $data_folder/$sub_folder
   echo "Processing folder: "$(pwd)
-  scripts=$(find . | egrep "8._.*\.sh" )
-  for script in $scripts
+  for script_index in $script_indices
   do
+    echo "Running script with index: $script_index"
+    script=$(find . | egrep $script_index"_.*\.sh" )
     echo "Running script: $script"
     ./$script
   done

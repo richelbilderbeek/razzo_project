@@ -4,50 +4,23 @@
 #
 # ./scripts/90_collect_run_times
 #
-
-
-# Convert time in HH:MM:SS
-time_str_to_n_sec <- function(str) {
-  x <- stringr::str_match(str, "((.)-)?(..):(..):(..)")
-  n_secs <- as.numeric(x[1, 6])
-  n_mins <- as.numeric(x[1, 5])
-  n_hours <- as.numeric(x[1, 4])
-  n_days <- as.numeric(x[1, 3])
-  if (is.na(n_days)) n_days <- 0
-
-  n_hours <- n_hours + (n_days * 24)
-  n_mins <- n_mins + (n_hours * 60)
-  n_secs <- n_secs + (n_mins * 60)
-  n_secs
-}
+data_folder <- "/media/richel/D2B40C93B40C7BEB/"
+scripts_folder <- "/home/richel/GitHubs/razzo_project"
 
 library(testthat)
-expect_equal(time_str_to_n_sec("00:00:11"), 11)
-expect_equal(time_str_to_n_sec("00:33:22"), (33 * 60) + 22)
-expect_equal(time_str_to_n_sec("12:55:44"), (12 * 60 * 60) + (55 * 60) + 44)
-expect_equal(
-  time_str_to_n_sec(str = "4-33:22:11"),
-  (4 * 24 * 60 * 60) + (33 * 60 * 60) + (22 * 60) + 11
-)
+library(peregrine)
 
-# Convert time in HH:MM:SS
-time_strs_to_n_secs <- function(strs) {
-  n_secs <- rep(NA, length(strs))
-  for (i in seq_along(strs)) {
-    n_secs[i] <- time_str_to_n_sec(strs[i])
-  }
-  n_secs
-}
-
-expect_silent(time_strs_to_n_secs(c("00:00:01", "01:02:03", "1-02:03:04")))
-
+expect_true(dir.exists(data_folder))
+expect_true(dir.exists(scripts_folder))
 
 all_parameter_filenames <- list.files(
-  path = "~/data",
+  path = data_folder,
   pattern = "parameters.RDa",
   full.names = TRUE,
   recursive = TRUE
 )
+expect_true(length(all_parameter_filenames) > 0)
+
 parameter_filenames <- as.character(
   na.omit(
     stringr::str_match(
@@ -56,23 +29,24 @@ parameter_filenames <- as.character(
     )[,1]
   )
 )
-parameter_filenames
+expect_true(length(parameter_filenames) > 0)
 
 # Dirty filenames, e.g. with
 # /data/razzo_project_20191017/results/razzo_project_20191014/run_times.csv
 run_times_filenames_dirty <- list.files(
-  path = "~/data",
+  path = data_folder,
   pattern = "run_times.csv",
   full.names = TRUE,
   recursive = TRUE
 )
-run_times_filenames_dirty
+expect_true(length(run_times_filenames_dirty) > 0)
+
 run_times_filenames <- stringr::str_match(
   string = run_times_filenames_dirty,
   pattern = ".*results/run_times.csv"
 )
 run_times_filenames <- as.character(na.omit(run_times_filenames[, 1]))
-
+expect_true(length(run_times_filenames) > 0)
 
 df <- data.frame()
 
@@ -86,7 +60,6 @@ for (i in seq_along(run_times_filenames)) {
     string = run_times_filename,
     "razzo_project_(........)"
   )[1, 2]
-  run_date
   testit::assert(length(cpu_times_n_secs) == length(state_str))
   this_df <- data.frame(date = run_date,  n_sec = cpu_times_n_secs, state = state_str)
   this_df$i <- seq(1, nrow(this_df))
@@ -94,12 +67,15 @@ for (i in seq_along(run_times_filenames)) {
 }
 
 df$date <- as.factor(df$date)
+expect_true(nrow(df) > 0)
 
 library(ggplot2)
 library(plyr)
 
 df$n_hour <- df$n_sec / (60 * 60)
 
+expect_true("n_hour" %in% names(df))
+expect_true("date" %in% names(df))
 ggplot(
   na.omit(df),
   aes(x = n_hour, fill = date)
@@ -115,7 +91,9 @@ ggplot(
 
 
 library(dplyr)
-names(df)
+
+expect_true("date" %in% names(df))
+expect_true("state" %in% names(df))
 df_state <- df %>%
     group_by(date) %>%
     dplyr::summarize(
@@ -124,10 +102,9 @@ df_state <- df %>%
       f_cancel = mean(state == "CANCELLED")
     )
 
-unique(df$state)
-
 ggplot(df_state, aes(x = date, y = f_ok, fill = date)) +
   geom_col() +
+  geom_text(aes(label = f_ok), position = position_stack(vjust = .5)) +
   ggplot2::scale_y_continuous(limits = c(0.0, 1.00), oob = scales::squish) +
   geom_hline(yintercept = 0.95, lty = "dashed") +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
