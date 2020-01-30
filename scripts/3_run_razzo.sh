@@ -9,6 +9,17 @@
 #
 #   sbatch ./scripts/3_run_razzo
 #
+# Will return the following text:
+#
+# Submitted batch jobs 12345677,12345678,12345679
+#
+# This is similar to other batch jobs, that return:
+#
+# Submitted batch job 12345677
+#
+# The reason is that run.sh parses the output of this script in the same way
+# as the other scripts.
+#
 # Peregrine directives:
 #SBATCH --partition=gelifes
 #SBATCH --time=1:00:00
@@ -20,46 +31,16 @@
 #SBATCH --output=3_run_razzo.log
 module load R
 module load MPFR
+jobids=()
 
-echo "Host name: "$HOSTNAME
+for filename in $(find . | egrep "parameters\.RDa")
+do
+  jobid=$(sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")" | cut -d ' ' -f 4)
+  jobids+=($jobid)
+done
 
-if [[ "$HOSTNAME" == "peregrine.hpc.rug.nl" ]]; then
-
-  echo "On Peregrine, login node"
-  for filename in $(find . | egrep "parameters\.RDa")
-  do
-    echo $filename
-    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
-  done
-
-elif [[ "$HOSTNAME" =~ ^pg-node.*$ ]]; then
-
-  echo "On Peregrine, worker node"
-  for filename in $(find . | egrep "parameters\.RDa")
-  do
-    echo $filename
-    sbatch ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
-  done
-
-elif [[ "$HOSTNAME" == "sonic" ]]; then
-
-  echo "Working from laptop"
-  for filename in $(find . | egrep "parameters\.RDa")
-  do
-    echo $filename
-    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
-  done
-
-else
-
-  echo "On some unknown environment"
-  for filename in $(find . | egrep "parameters\.RDa")
-  do
-    echo $filename
-    ./scripts/run_r_cmd "razzo::run_razzo_from_file(\"$filename\")"
-  done
-
-fi
-
-
+# Convert array of job IDs to colon-seperated string
+txt=$(printf ":%s" "${jobids[@]}")
+txt=${txt:1}
+echo "Submitted batch jobs "$txt 
 
