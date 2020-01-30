@@ -28,8 +28,11 @@ fi
 
 echo "Experiment type: "$experiment_type
 
-./scripts/1_install_razzo.sh
+echo "NO NEW INSTALL OF RAZZO: Do this yourself, by calling scripts/1_install_razzo.sh"
+# ./scripts/1_install_razzo.sh
+
 ./scripts/2_create_parameter_files.sh $experiment_type
+
 jobid=$(./scripts/3_run_razzo.sh | cut -d ' ' -f 4)
 
 # Later scripts:
