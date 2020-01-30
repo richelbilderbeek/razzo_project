@@ -5,43 +5,6 @@
 # ./scripts/90_collect_run_times
 #
 
-
-# Convert time in HH:MM:SS
-time_str_to_n_sec <- function(str) {
-  x <- stringr::str_match(str, "((.)-)?(..):(..):(..)")
-  n_secs <- as.numeric(x[1, 6])
-  n_mins <- as.numeric(x[1, 5])
-  n_hours <- as.numeric(x[1, 4])
-  n_days <- as.numeric(x[1, 3])
-  if (is.na(n_days)) n_days <- 0
-
-  n_hours <- n_hours + (n_days * 24)
-  n_mins <- n_mins + (n_hours * 60)
-  n_secs <- n_secs + (n_mins * 60)
-  n_secs
-}
-
-library(testthat)
-expect_equal(time_str_to_n_sec("00:00:11"), 11)
-expect_equal(time_str_to_n_sec("00:33:22"), (33 * 60) + 22)
-expect_equal(time_str_to_n_sec("12:55:44"), (12 * 60 * 60) + (55 * 60) + 44)
-expect_equal(
-  time_str_to_n_sec(str = "4-33:22:11"),
-  (4 * 24 * 60 * 60) + (33 * 60 * 60) + (22 * 60) + 11
-)
-
-# Convert time in HH:MM:SS
-time_strs_to_n_secs <- function(strs) {
-  n_secs <- rep(NA, length(strs))
-  for (i in seq_along(strs)) {
-    n_secs[i] <- time_str_to_n_sec(strs[i])
-  }
-  n_secs
-}
-
-expect_silent(time_strs_to_n_secs(c("00:00:01", "01:02:03", "1-02:03:04")))
-
-
 all_parameter_filenames <- list.files(
   path = "~/data",
   pattern = "parameters.RDa",

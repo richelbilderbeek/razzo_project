@@ -10,7 +10,7 @@
 # Comparison scripts:
 # - Start with a 9 and have a digit before the underscore
 # - Are not '99_zip.sh'
-scripts=$(ls scripts | sort -g | egrep "^9.?_.*sh" | egrep -v "99_zip.sh")
+scripts=$(ls scripts | sort -g | egrep "^9._.*sh" | egrep -v "99_zip.sh")
 
 for script in $scripts
 do

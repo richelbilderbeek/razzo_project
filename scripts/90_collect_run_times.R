@@ -10,6 +10,13 @@ scripts_folder <- "/home/richel/GitHubs/razzo_project"
 library(testthat)
 library(peregrine)
 
+if (!dir.exists(data_folder)) {
+  stop("Data folder '", data_folder,"' not found")
+}
+if (!dir.exists(scripts_folder)) {
+  stop("Scripts folder '", scripts_folder,"' not found")
+}
+
 expect_true(dir.exists(data_folder))
 expect_true(dir.exists(scripts_folder))
 
