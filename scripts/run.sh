@@ -35,6 +35,8 @@ echo "NO NEW INSTALL OF RAZZO: Do this yourself, by calling scripts/1_install_ra
 
 jobid=$(./scripts/3_run_razzo.sh | cut -d ' ' -f 4)
 
+echo "Job IDs obtained from 3_run_razzo.sh: "$jobid
+
 # Later scripts:
 # - Start with one or two digits before the underscore
 # - Are not among the first three
@@ -42,7 +44,7 @@ later_scripts=$(ls scripts | sort -g | egrep "^..?_.*sh" | tail -n +4)
 
 for script in $later_scripts
 do
-  jobid=$(sbatch --dependency=afterok:$jobid scipts/$script | cut -d ' ' -f 4)
+  jobid=$(sbatch --dependency=afterok:$jobid scripts/$script | cut -d ' ' -f 4)
   echo "x. Job ID: "$jobid
 done
 
