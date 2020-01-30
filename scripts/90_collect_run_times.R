@@ -28,15 +28,32 @@ all_parameter_filenames <- list.files(
 )
 expect_true(length(all_parameter_filenames) > 0)
 
-parameter_filenames <- as.character(
-  na.omit(
+all_data_folders <- unique(
     stringr::str_match(
-      string = all_parameter_filenames,
-      pattern = ".*razzo_project.*/1/parameters.RDa"
-    )[,1]
-  )
+    string = all_parameter_filenames,
+    pattern = ".*/data"
+  )[, 1]
 )
+
+
+parameter_filenames <- all_data_folders
+for (i in seq_along(all_data_folders)) {
+  first_parameter_filename <- as.character(
+    na.omit(
+      stringr::str_match(
+        string = all_parameter_filenames,
+        pattern = paste0(all_data_folders[i], "/.*/parameters.RDa$")
+      )[, 1]
+    )
+  )[1]
+  parameter_filenames[i] <- first_parameter_filename
+}
+
 expect_true(length(parameter_filenames) > 0)
+expect_equal(
+  length(parameter_filenames),
+  length(all_data_folders)
+)
 
 ################################################################################
 # Collect run-times per run unaggregated
@@ -151,7 +168,6 @@ ggplot(df_state, aes(x = date, y = f_ok, fill = date)) +
 
 # As table
 df_means <- ddply(na.omit(df), .(date), summarize, mean_runtime_hours = mean(n_hour))
-names(df_means)
 names(df_state)
 
 df_means <- merge(x = df_means, df_state)
