@@ -38,6 +38,9 @@ parameter_filenames <- as.character(
 )
 expect_true(length(parameter_filenames) > 0)
 
+################################################################################
+# Collect run-times per run unaggregated
+################################################################################
 # Dirty filenames, e.g. with
 # /data/razzo_project_20191017/results/razzo_project_20191014/run_times.csv
 run_times_filenames_dirty <- list.files(
@@ -62,19 +65,42 @@ for (i in seq_along(run_times_filenames)) {
   cpu_times_str <- as.character(read.csv(run_times_filename)$cpu_time)
   state_str <- as.character(read.csv(run_times_filename, na.strings = "")$state)
   cpu_times_n_secs <- time_strs_to_n_secs(cpu_times_str)
-  cpu_times_n_secs
   run_date <- stringr::str_match(
     string = run_times_filename,
     "razzo_project_(........)"
   )[1, 2]
   testit::assert(length(cpu_times_n_secs) == length(state_str))
-  this_df <- data.frame(date = run_date,  n_sec = cpu_times_n_secs, state = state_str)
+  filenames <- basename(as.character(read.csv(run_times_filename)$filename))
+  this_df <- data.frame(
+    date = run_date,
+    n_sec = cpu_times_n_secs,
+    state = state_str,
+    filename = filenames
+  )
   this_df$i <- seq(1, nrow(this_df))
   df <- rbind(df, this_df)
 }
 
+df$filename <- as.character(df$filename)
 df$date <- as.factor(df$date)
+
+# All filenames are unique
+expect_equal(
+  length(unique(df$filename)),
+  length(df$filename)
+)
+
 expect_true(nrow(df) > 0)
+
+write.csv(x = df, file = "~/GitHubs/razzo_pilot_results/run_times_per_run.csv")
+cat(
+  knitr::kable(df, format = "markdown"),
+  sep = "\n",
+  file = "~/GitHubs/razzo_pilot_results/run_times_per_run.md"
+)
+################################################################################
+#
+################################################################################
 
 library(ggplot2)
 library(plyr)
