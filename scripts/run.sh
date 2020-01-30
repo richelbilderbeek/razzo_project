@@ -1,18 +1,5 @@
 #!/bin/bash
-# Run one full experiment
-#
-# Usage, locally:
-#
-#  # Run default experiment type
-#  ./scripts/run.sh
-#
-#  # Run test experiment
-#  ./scripts/run.sh test
-#
-#  # Run full experiment
-#  ./scripts/run.sh full
-#
-# Usage, on Peregrine:
+# Run one full experiment on Peregrine:
 #
 #  # Run default experiment type
 #  sbatch ./scripts/run.sh
@@ -41,26 +28,18 @@ fi
 
 echo "Experiment type: "$experiment_type
 
-# 1
-jobid=$(sbatch 1_install_razzo.sh | cut -d ' ' -f 4)
-print "1. Job ID: "$jobid
-
-# 2
-jobid=$(sbatch --dependency=afterok:$jobid 2_create_parameter_files.sh $experiment_type | cut -d ' ' -f 4)
-print "2. Job ID: "$jobid
-
-# 3
-jobid=$(sbatch --dependency=afterok:$jobid 3_run_razzo.sh | cut -d ' ' -f 4)
-print "3. Job ID: "$jobid
+./scripts/1_install_razzo.sh
+./scripts/2_create_parameter_files.sh $experiment_type
+jobid=$(./scripts/3_run_razzo.sh | cut -d ' ' -f 4)
 
 # Later scripts:
 # - Start with one or two digits before the underscore
 # - Are not among the first three
-later_scripts=$(ls | sort -g | egrep "^..?_.*sh" | tail -n +4)
+later_scripts=$(ls scripts | sort -g | egrep "^..?_.*sh" | tail -n +4)
 
 for script in $later_scripts
 do
-  jobid=$(sbatch --dependency=afterok:$jobid $script | cut -d ' ' -f 4)
-  print "x. Job ID: "$jobid
+  jobid=$(sbatch --dependency=afterok:$jobid scipts/$script | cut -d ' ' -f 4)
+  echo "x. Job ID: "$jobid
 done
 
