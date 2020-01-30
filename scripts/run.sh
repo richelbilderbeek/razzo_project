@@ -17,8 +17,8 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --ntasks=1
 #SBATCH --mem=1G
-#SBATCH --job-name=run.sh
-#SBATCH --output=run.sh.log
+#SBATCH --job-name=run
+#SBATCH --output=run.log
 module load R
 
 experiment_type=$1
