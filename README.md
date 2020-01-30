@@ -1,4 +1,4 @@
-# razzo_project
+# `razzo_project`
 
 Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 ---------|--------------------------------------------------------------------------------
@@ -6,17 +6,20 @@ Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
 `develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/razzo_project.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/razzo_project)
 `richel` |[![Build Status](https://travis-ci.org/richelbilderbeek/razzo_project.svg?branch=richel)](https://travis-ci.org/richelbilderbeek/razzo_project)
 
-`razzo` experiment scripts and storage.
+`razzo_project` contains the bash scripts to run and analyse one full 
+`razzo` experiment on the Peregrine computer cluster.
 
 The research project uses these GitHub repo's:
 
- * [razzo](https://github.com/richelbilderbeek/razzo): R code
+ * [razzo](https://github.com/richelbilderbeek/razzo): R code for the experiment
  * [raztr](https://github.com/richelbilderbeek/raztr): `razzo` results of a test run
  * [razzo_project](https://github.com/richelbilderbeek/razzo_project): bash scripts to run and analyse an experiment
  * [razzo_article (private)](https://github.com/richelbilderbeek/razzo_article): scientific manuscript (private GitHub for now)
  * [razzo_pilot_results (private)](https://github.com/richelbilderbeek/razzo_pilot_results): results of the pilot runs
 
 ## Versions
+
+From `scripts/1_install_razzo.sh`:
 
  * [nLTT v1.4.3](https://github.com/thijsjanzen/nLTT/releases/tag/v1.4.3)
  * [beautier v2.3.2](https://cran.r-project.org/package=beautier)
@@ -35,31 +38,6 @@ The research project uses these GitHub repo's:
 
 Code can be found in the `packages` folder.
 
-## Data
-
-To create the table in [overview.md](overview.md):
-
-```
-cd razzo_project
-./scripts/90_collect_run_times.sh
-```
-
-See [overview.md](overview.md).
-
- * `20190908` is the favorite starting point
- * The `n_particles` in `20190908` and `20190910` 
-   is correct to the actual value of 1, due to a `mcbette` error 
-
-To download the data, 
-download `http://richelbilderbeek.nl/razzo_project_[date].zip` where `[date]` is the date, 
-for example: [http://richelbilderbeek.nl/razzo_project_20190801.zip](http://richelbilderbeek.nl/razzo_project_20190801.zip)
-
-Our verdicts if a setting is good enough: see [verdict.md](verdict.md).
-
-Note:
-
- * Bug #350 had its unfluence up until #346. #347 is without that bug
-
 ## Folder structure
 
 `razzo_project` has the following folder structure:
@@ -73,7 +51,7 @@ The scripts in `scripts` create the following extra folders:
 
 ## Cluster usage
 
-:warning: must run from the root folder
+:warning: must run from the `razzo_project` root folder
 
 Regenerate testing data:
 
@@ -84,11 +62,13 @@ Run the razzo experiment:
  * `sbatch ./scripts/1_install_razzo.sh`
  * `sbatch ./scripts/2_create_parameter_files.sh test` or `sbatch ./scripts/2_create_parameter_files.sh ful`
  * `sbatch ./scripts/3_run_razzo.sh`
+ * `sbatch ./scripts/6_create_mbd_file.sh`
  * `sbatch ./scripts/7_create_nltt_stats_file.sh`
  * `sbatch ./scripts/8_create_esses_files.sh`
  * `sbatch ./scripts/9_create_marg_liks_file.sh`
- * `sbatch ./scripts/10_create_fig_1_file.sh`
+ * `sbatch ./scripts/10_create_n_mb_species_file.sh`
  * `sbatch ./scripts/11_create_n_taxa_file.sh`
+ * `sbatch ./scripts/12_create_run_times_file.sh`
 
 ## Local usage
 
@@ -96,11 +76,3 @@ Same, but without `sbatch`.
 
 See [.travis.yml](.travis.yml) for the complete usage.
 
-## `mcbette` timeseries
-
-n_taxa|n_nucleotides|run_time
----|---|---
-10|1k|0:40 or 40 mins
-20|1k|1:23 or 83
-40|1k|3:35 or 215 mins
-80|1k|more than 10 hours, got cancelled
