@@ -49,9 +49,13 @@ The scripts in `scripts` create the following extra folders:
  * `data`: contains the simulation data
  * `results`: contains the simulation results
 
-## Cluster usage
+## Run one full experiment
 
 :warning: must run from the `razzo_project` root folder
+
+Here, we run one full experiment, meaning that there will be one or more
+`parameters.RDa` files created. This is done on the Peregrine computer
+cluster.
 
 Regenerate testing data:
 
@@ -59,8 +63,12 @@ Regenerate testing data:
 
 Run the razzo experiment:
 
+ * `./scripts/run.sh test` (for test) or `./scripts/run.sh full` (for full run)
+
+For doing the individual steps:
+
  * `sbatch ./scripts/1_install_razzo.sh`
- * `sbatch ./scripts/2_create_parameter_files.sh test` or `sbatch ./scripts/2_create_parameter_files.sh ful`
+ * `sbatch ./scripts/2_create_parameter_files.sh test` or `sbatch ./scripts/2_create_parameter_files.sh full`
  * `sbatch ./scripts/3_run_razzo.sh`
  * `sbatch ./scripts/6_create_mbd_file.sh`
  * `sbatch ./scripts/7_create_nltt_stats_file.sh`
@@ -70,9 +78,20 @@ Run the razzo experiment:
  * `sbatch ./scripts/11_create_n_taxa_file.sh`
  * `sbatch ./scripts/12_create_run_times_file.sh`
 
-## Local usage
+Scripts for these individual steps can be run on regular 
+computers (i.e. without `sbatch`), as is done in [.travis.yml](.travis.yml).
 
-Same, but without `sbatch`.
+## Process one full experiment
 
-See [.travis.yml](.travis.yml) for the complete usage.
+After running a full experiment, the data is processed. Among others,
+the figures are created. This must be done locally, as Peregrine
+cannot handle graphics well.
+
+ * `./scripts/process.sh`
+
+## Compare multiple experiments
+
+Do this locally:
+
+ * `./scripts/compare.sh`
 
