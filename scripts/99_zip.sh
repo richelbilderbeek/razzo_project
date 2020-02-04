@@ -19,4 +19,4 @@
 #SBATCH --mem=1G
 #SBATCH --job-name=99_zip
 #SBATCH --output=99_zip.log
-zip -r razzo_project.zip data/ results/ scripts/ $(ls *.log)
+zip -r /data/p230198/razzo_project.zip data/ results/ scripts/ $(ls *.log)
