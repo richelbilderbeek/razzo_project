@@ -10,6 +10,10 @@
 #
 #   sbatch ./scripts/1_install_razzo
 #
+# Note:
+#
+# Prefer the install scripts on github.com/richelbilderbeek/peregrine
+#
 # Peregrine directives:
 #SBATCH --partition=gelifes
 #SBATCH --time=1:00:00
