@@ -12,7 +12,6 @@ Description: The scripts for the razzo project.
   The main repo for the scripts is razzo_project.
 License: GPL-3
 Encoding: UTF-8
-LazyData: true
 Imports: 
     beastier (>= 2.1.1),
     peregrine (>= 0.4)
