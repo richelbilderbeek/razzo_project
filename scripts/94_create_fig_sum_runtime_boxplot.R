@@ -107,8 +107,7 @@ ggplot(
   labs(
     title = "Simulation run-times per crown age"
   ) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_run_times_per_crown_age.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_run_times_per_crown_age.png", width = 7, height = 7)
 
 ggplot(
   na.omit(df),
@@ -123,6 +122,5 @@ ggplot(
     title = "Simulation run-times per crown age (grouped) per candidate model set",
     caption = "94"
   ) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_run_times_per_crown_age_grouped.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_run_times_per_crown_age_grouped.png", width = 7, height = 7)
 

@@ -99,8 +99,7 @@ ggplot(
   labs(
     title = "Simulation run-times"
   ) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_run_times_boxplot.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_run_times_boxplot.png", width = 7, height = 7)
 
 
 # As table
@@ -165,8 +164,7 @@ ggplot(
   labs(
     title = "Mean number of taxa"
   ) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_mean_n_taxa.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_mean_n_taxa.png", width = 7, height = 7)
 
 
 # Mean ESS
@@ -179,5 +177,4 @@ ggplot(
   labs(
     title = "Mean ESS"
   ) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_mean_esses.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_mean_esses.png", width = 7, height = 7)

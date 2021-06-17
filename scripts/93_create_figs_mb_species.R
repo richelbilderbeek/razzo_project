@@ -32,13 +32,11 @@ ggplot(df, aes(x = date, y = f_mb_species)) + geom_boxplot() +
     title = "Fraction of multiple-born species",
     caption = "93"
   ) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_f_mb_species.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_f_mb_species.png", width = 7, height = 7)
 
 ggplot(df, aes(x = date, y = n_mb_species)) + geom_boxplot() +
   labs(
     title = "Number of multiple-born species",
     caption = "93"
   ) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_n_mb_species.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_n_mb_species.png", width = 7, height = 7)

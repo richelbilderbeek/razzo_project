@@ -102,7 +102,7 @@ ggplot(
     aes(xintercept = mean, col = date)
   ) + labs(
     title = "Simulation run-times"
-  ) + ggsave("~/fig_run_times.png", width = 7, height = 7)
+  ); ggsave("~/fig_run_times.png", width = 7, height = 7)
 
 
 # As table

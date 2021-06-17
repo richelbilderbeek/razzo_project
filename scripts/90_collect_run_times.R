@@ -111,7 +111,7 @@ ggplot(
     aes(xintercept = mean, col = date)
   ) + labs(
     title = "Simulation run-times"
-  ) + ggsave("~/GitHubs/razzo_pilot_results/fig_run_times.png", width = 7, height = 7)
+  ); ggsave("~/GitHubs/razzo_pilot_results/fig_run_times.png", width = 7, height = 7)
 
 
 library(dplyr)
@@ -133,8 +133,7 @@ ggplot(df_state, aes(x = date, y = f_ok, fill = date)) +
   theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
   labs(
     title = "Runs that finish with OK"
-  ) +
-  ggsave("~/GitHubs/razzo_pilot_results/fig_states.png", width = 7, height = 7)
+  ); ggsave("~/GitHubs/razzo_pilot_results/fig_states.png", width = 7, height = 7)
 
 
 

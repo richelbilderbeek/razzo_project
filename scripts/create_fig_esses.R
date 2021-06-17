@@ -42,8 +42,7 @@ ggplot(df, aes(ess_likelihood)) +
     ),
     x = "Effective sample size of likelihood estimation",
     y = "Count"
-  ) +
-  ggsave(fig_esses_filename, width = 7, height = 7)
+  ); ggsave(fig_esses_filename, width = 7, height = 7)
 
 
 # Cumulative histogram
@@ -87,5 +86,4 @@ ggplot(df_cumulative, aes(x = value, y = 100.0 * esses_sum_cnt / length(esses)))
       "n =  ", nrow(df), ". ",
       "ESSes < 200: ", round(f_below * 100), "%"
     )
-  ) +
-  ggsave(fig_esses_cumulative_filename, width = 7, height = 7)
+  ); ggsave(fig_esses_cumulative_filename, width = 7, height = 7)

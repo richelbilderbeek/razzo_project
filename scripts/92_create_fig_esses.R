@@ -42,5 +42,4 @@ ggplot(df, aes(x = date, y = ess_likelihood)) + geom_boxplot() +
     caption = "92"
   ) +
   facet_grid(tree ~ best_or_gen) +
-  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-  ggsave("~/GitHubs/razzo_project/fig_esses.png", width = 7, height = 7)
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)); ggsave("~/GitHubs/razzo_project/fig_esses.png", width = 7, height = 7)

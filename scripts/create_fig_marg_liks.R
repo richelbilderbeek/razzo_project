@@ -87,5 +87,4 @@ ggplot(df, aes(x = tree, y = marg_log_lik, col = inference_model)) +
     subtitle = paste0("Do twin models really prefer the true model of ", twin_generative_model_name, "?"),
     caption = "Error bars denote standard deviation in estimation",
     y = "Marginal log likelihood (higher means the likelier model)"
-  ) +
-  ggsave(file.path(getwd(), "results", "fig_marg_liks.png"), width = 10, height = 10)
+  ); ggsave(file.path(getwd(), "results", "fig_marg_liks.png"), width = 10, height = 10)

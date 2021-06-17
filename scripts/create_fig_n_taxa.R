@@ -23,5 +23,4 @@ ggplot(df, aes(n_taxa)) +
     caption = paste0("Red: mean. Blue: median. Number of parameter setting: ", nrow(df)),
     x = "Number of taxa",
     y = "Count"
-  ) +
-  ggsave(fig_n_taxa_filename, width = 7, height = 7)
+  ); ggsave(fig_n_taxa_filename, width = 7, height = 7)
