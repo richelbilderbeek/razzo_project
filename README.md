@@ -1,10 +1,10 @@
 # razzo_project
 
-Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.org)
+Branch   |[![Travis CI logo](pics/TravisCI.png)](https://travis-ci.com)
 ---------|--------------------------------------------------------------------------------
-`master` |[![Build Status](https://travis-ci.org/richelbilderbeek/razzo_project.svg?branch=master)](https://travis-ci.org/richelbilderbeek/razzo_project)
-`develop`|[![Build Status](https://travis-ci.org/richelbilderbeek/razzo_project.svg?branch=develop)](https://travis-ci.org/richelbilderbeek/razzo_project)
-`richel` |[![Build Status](https://travis-ci.org/richelbilderbeek/razzo_project.svg?branch=richel)](https://travis-ci.org/richelbilderbeek/razzo_project)
+`master` |[![Build Status](https://travis-ci.com/richelbilderbeek/razzo_project.svg?branch=master)](https://travis-ci.com/richelbilderbeek/razzo_project)
+`develop`|[![Build Status](https://travis-ci.com/richelbilderbeek/razzo_project.svg?branch=develop)](https://travis-ci.com/richelbilderbeek/razzo_project)
+`richel` |[![Build Status](https://travis-ci.com/richelbilderbeek/razzo_project.svg?branch=richel)](https://travis-ci.com/richelbilderbeek/razzo_project)
 
 `razzo` experiment scripts and storage.
 
